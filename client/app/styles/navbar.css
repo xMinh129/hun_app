@@ -1,0 +1,37 @@
+/* Navbar */
+.highlighted {
+  margin-right: 20px;
+  background: #47ada0;
+}
+.navbar-collapse.collapse {
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+  visibility: visible !important;
+  width: auto;
+}
+.col-lg-9 {
+  max-width: 100%
+}
+
+.bg-light {
+   background-color: #fff !important;
+}
+
+.navbar-brand {
+  padding-left: 80px;
+}
+
+.navbar-light .navbar-nav .nav-link:not(:last-child) {
+  color: black !important
+}
+
+.volunteer-tab {
+  color: white !important
+}
+
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: white;
+  background: #FFBF00
+}
