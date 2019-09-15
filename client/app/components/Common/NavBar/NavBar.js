@@ -64,10 +64,10 @@ class NavBar extends Component {
                 <NavLink href="/#meettheteam">Team HUN</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#newsandevents">Tin tức</NavLink>
+                <NavLink href="/#newsandevents">Tin Tức</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#contacts">Tin tức</NavLink>
+                <NavLink href="/#contacts">Liên Hệ </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="highlighted" onClick={this.openModal}><span className="volunteer-tab">Volunteer</span></NavLink>
