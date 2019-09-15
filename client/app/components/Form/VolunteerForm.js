@@ -8,10 +8,9 @@ class VolunteerForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onSelect = this.onSelect.bind(this);
-    this.closeModal = this.closeModal.bind(this);
 
     this.state = {
-      modalIsOpen: this.props.modalIsOpen,
+      modalIsOpen: this.props.modalIsOpen ? this.props.modalIsOpen : false,
       contact: {
         name: '',
         email: '',
@@ -20,11 +19,6 @@ class VolunteerForm extends Component {
       },
       submitSuccess: false
     };
-  }
-
-
-  closeModal() {
-    this.setState({modalIsOpen: false});
   }
 
   componentDidUpdate(prevProps) {
@@ -77,7 +71,6 @@ class VolunteerForm extends Component {
   onChange(event){
     event.preventDefault();
     const field = event.target.name;
-    console.log(field);
     const contact = this.state.contact;
     contact[field] = event.target.value;
     this.setState({
@@ -93,17 +86,21 @@ class VolunteerForm extends Component {
     });
   }
 
-
-
   render() {
-    let options = [{"label": "Lớp học Ngôn Ngữ Ký Hiệu", "value": "Lớp học Ngôn Ngữ Ký Hiệu"},
-      {"label": "Xây dựng video tiếng Anh", "value": "Xây dựng vieo tiếng Anh"},
-      {"label": "Bread and Smiles", "value": "Bread and Smiles"},
-      {"label": "Lớp học nghề kỹ năng", "value": "Lớp học nghề kỹ năng"},
-      {"label": "Life Project For Youths", "value": "Life Project For Youths"}
-    ];
+    let options;
+    if (this.props.volunteerType){
+      options = [{"label": this.props.volunteerType, "value": this.props.volunteerType}];
+    }
+    else {
+      options = [{"label": "Lớp học Ngôn Ngữ Ký Hiệu", "value": "Lớp học Ngôn Ngữ Ký Hiệu"},
+        {"label": "Xây dựng video tiếng Anh", "value": "Xây dựng vieo tiếng Anh"},
+        {"label": "Bread and Smiles", "value": "Bread and Smiles"},
+        {"label": "Lớp học nghề kỹ năng", "value": "Lớp học nghề kỹ năng"},
+        {"label": "Life Project For Youths", "value": "Life Project For Youths"}
+      ];
+    }
     return (
-      <Modal show={this.state.modalIsOpen} onHide={this.closeModal} animation={false}>
+      <Modal show={this.state.modalIsOpen} onHide={this.props.closeModal} animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>TÌNH NGUYỆN VIÊN HEAR.US.NOW</Modal.Title>
         </Modal.Header>
@@ -133,8 +130,8 @@ class VolunteerForm extends Component {
                 name="msg"
                 value={this.state.contact.msg}
                 onChange={this.onChange}></textarea>
-              <p>Bạn thích tham gia dự án nào của HUN?"</p>
-              <Select isMulti options={options} onChange={(values) => this.onSelect(values)} />
+              <p>Bạn thích tham gia dự án nào của HUN?</p>
+              <Select placeholder={this.props.volunteerType ? this.props.volunteerType : "Hoạt động"} isMulti options={options} onChange={(values) => this.onSelect(values)} />
               <button className="btn btn-secondary">Gửi</button>
             </form>
           </div>) : (

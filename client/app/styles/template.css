@@ -309,6 +309,14 @@ section#slider:before {
 	display: block;
 }
 
+.slider-3 {
+  background-position: 0px -100px;
+}
+
+.slider-4 {
+  background-position: 0px -350px;
+}
+
 /*
 ----------------------------
 04. SECTION: ABOUT
@@ -716,6 +724,26 @@ div.owl-next {
     overflow: hidden;
 }
 
+.top_slider_wrap .owl-prev:hover {
+  background-color: #FFBF00;
+  background-image: url('../../public/assets/img/images/prev_arrow_black.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.top_slider_wrap .owl-next {
+  background-color: #000000;
+  background-image: url('../../public/assets/img/images/next_arrow_yellow.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.top_slider_wrap .owl-next:hover {
+  background-color: #FFBF00;
+  background-image: url('../../public/assets/img/images/next_arrow_black.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .top_slider_wrap .owl-nav div {
 	height: 100px;
@@ -1891,6 +1919,15 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   .funding-public-text span {
     font-size: 18px
   }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  .funding-public-text {
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding-top: 0px
+  }
+
 }
 
 /*Event*/

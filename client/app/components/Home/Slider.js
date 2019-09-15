@@ -16,6 +16,9 @@ class Slider extends Component {
 
   render() {
     let bg1= require('../../../public/assets/img/images/slides/background_1.jpg');
+    let bg2= require('../../../public/assets/img/images/slides/background_2.jpg');
+    let bg3= require('../../../public/assets/img/images/slides/background_3.jpg');
+    let bg4= require('../../../public/assets/img/images/slides/background_4.jpg');
     return (
       <section id="slider">
         <div className="owl_slider top_slider_wrap">
@@ -49,12 +52,12 @@ class Slider extends Component {
                 </div>
               </div>
             </li>
-            <li className="style-3" style={{backgroundImage: "url("+bg1+")"}}>
+            <li className="style-3" style={{backgroundImage: "url("+bg2+")"}}>
               <div className="contentwrap">
                 <div className="container">
                   <div className="content">
                     <div className="slideheadingwrap">
-                      <h2>Công Nghệ Và Bình Đẳng Giáo Dục</h2>
+                      <h2>Bình Đẳng Giáo Dục</h2>
                     </div>
                     <div className="description_wrap">
                       <div className="description hidden-xs">
@@ -67,8 +70,8 @@ class Slider extends Component {
               </div>
             </li>
 
-            <li className="style-1"
-                style={{backgroundImage: "url("+bg1+")"}}>
+            <li className="style-1 slider-3"
+                style={{backgroundImage: "url("+bg3+")"}}>
               <div className="contentwrap">
                 <div className="container">
                   <div className="content">
@@ -84,8 +87,8 @@ class Slider extends Component {
                 </div>
               </div>
             </li>
-            <li className="style-2"
-                style={{backgroundImage: "url("+bg1+")"}}>
+            <li className="style-2 slider-4"
+                style={{backgroundImage: "url("+bg4+")"}}>
               <div className="contentwrap">
                 <div className="container">
                   <div className="content">

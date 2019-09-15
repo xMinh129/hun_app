@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import VolunteerForm from "../../Form/VolunteerForm";
 import {
   Collapse,
@@ -8,17 +7,14 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  NavLink} from 'reactstrap';
 
 class NavBar extends Component {
   constructor(props) {
     super(props);
     this.openModal = this.openModal.bind(this);
     this.toggle = this.toggle.bind(this);
+    this.closeModal = this.closeModal.bind(this);
 
     this.state = {
       modalIsOpen: false,
@@ -32,8 +28,16 @@ class NavBar extends Component {
   }
 
   openModal() {
-    this.setState({modalIsOpen: true});
+    this.setState({
+      modalIsOpen: true,
+
+    });
   }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
+  }
+
 
   toggle() {
     console.log(this.state.isOpen);
@@ -73,7 +77,7 @@ class NavBar extends Component {
           </Collapse>
         </Navbar>
 
-        {/*<VolunteerForm modalIsOpen={this.state.modalIsOpen}/>*/}
+        <VolunteerForm modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal}/>
 
 
       </section>

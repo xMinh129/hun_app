@@ -23,7 +23,7 @@ $(document).ready(function(){
         onChanged: function(){
             setTimeout(function(){
                 afterslide();
-            }, 500);
+            }, 100);
         }
     });
 
