@@ -178,7 +178,7 @@ class Team extends Component {
             <div className="at-column">
               <div className="at-user">
                 <div className="at-user__avatar"><img
-                  src={require('../../../public/assets/img/images/team/thao.jpg')}/></div>
+                  src={require('../../../public/assets/img/images/team/phuong_thao.jpg')}/></div>
                 <div className="at-user__name">Phạm Phương Thảo</div>
                 <div className="at-user__title">Giáo Viên Tiếng Anh</div>
               </div>
