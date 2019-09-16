@@ -273,6 +273,16 @@ section#header {
 	color: #fff;
 }
 
+.highlighted {
+  border-radius: 5px;
+  border: 1px rgba(0,0,0,.5) solid;
+}
+
+.donation-button {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 /* Mobile */
 ul.mobile-nav {
    margin-top: 20px;
@@ -540,6 +550,10 @@ section#slider:before {
     border: none;
     background-color: transparent;
     left: 0px;
+}
+
+.bx-controls .bx-has-pager .bx-has-controls-direction {
+  padding-top: 80px
 }
 
 /*
@@ -1840,7 +1854,7 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 }
 
 .mission_3 {
-  color: #dc272e !important;
+  color: #FF5A5F !important;
 }
 
 /* Achievement */

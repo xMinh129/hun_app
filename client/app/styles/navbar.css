@@ -1,8 +1,10 @@
 /* Navbar */
-.highlighted {
+.highlighted:hover {
   margin-right: 20px;
-  background: #47ada0;
+  background: #47ada0 !important;
+  border: none;
 }
+
 .navbar-collapse.collapse {
   height: auto !important;
   padding-bottom: 0;
@@ -25,11 +27,6 @@
 .navbar-light .navbar-nav .nav-link:not(:last-child) {
   color: black !important
 }
-
-.volunteer-tab {
-  color: white !important
-}
-
 
 .navbar-light .navbar-nav .nav-link:hover {
   color: white;

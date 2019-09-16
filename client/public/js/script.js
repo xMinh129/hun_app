@@ -79,11 +79,8 @@ $(document).ready(function(){
     // Sponsors Section BX Slider Settings
     $('ul.sponsor_slider').bxSlider({
         minSlides: 2,
-        maxSlides: 5,
-        slideWidth: 170,
-        slideMargin: 40,
-        ticker: true,
-        speed: 30000
+        maxSlides: 3,
+        slideWidth: 200
     });
 
     //Hide mobile menu when you click link 

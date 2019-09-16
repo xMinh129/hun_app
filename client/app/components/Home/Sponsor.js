@@ -32,7 +32,6 @@ class Sponsor extends Component {
                 <li><img src={require("../../../public/assets/img/images/sponsors/2.jpg")} alt=""/></li>
                 <li><img src={require("../../../public/assets/img/images/sponsors/3.jpg")} alt=""/></li>
                 <li><img src={require("../../../public/assets/img/images/sponsors/4.jpg")} alt=""/></li>
-                <li><img src={require("../../../public/assets/img/images/sponsors/5.jpg")} alt=""/></li>
               </ul>
             </div>
           </div>
