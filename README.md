@@ -1,4 +1,5 @@
-# MERN-boilerplate
+## HUN WEB APP USING MERN-boilerplate
+## Hear.Us.Now is a non-profit project for empowering deaf youths through education.
 
 This is a boilerplate project using the following technologies:
 - [React](https://facebook.github.io/react/) and [React Router](https://reacttraining.com/react-router/) for the frontend
