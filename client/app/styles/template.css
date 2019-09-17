@@ -2016,6 +2016,10 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 
 /* Sponsor images */
 
+.sponsor-title {
+  padding-bottom: 20px;
+}
+
 .sponsor_img {
   border-radius: 0px !important
 }

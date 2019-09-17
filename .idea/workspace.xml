@@ -4,13 +4,7 @@
     <list default="true" id="8a2c87f0-e49c-4b04-befc-a244d0cc4548" name="Default Changelist" comment="5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/app/components/Home/Sponsor.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/Home/Sponsor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Home/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/Home/Team.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/app/styles/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/styles/template.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/assets/img/images/sponsors/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/assets/img/images/sponsors/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/assets/img/images/sponsors/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/assets/img/images/sponsors/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/assets/img/images/sponsors/5.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +68,7 @@
       <workItem from="1568474158060" duration="14665000" />
       <workItem from="1568651108257" duration="6964000" />
       <workItem from="1568727496274" duration="2776000" />
-      <workItem from="1568742460439" duration="24000" />
+      <workItem from="1568742460439" duration="525000" />
     </task>
     <servers />
   </component>

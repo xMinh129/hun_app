@@ -17,7 +17,7 @@ class Sponsor extends Component {
   render() {
     return (
       <section id="sponsors">
-        <div className="container">
+        <div className="container sponsor-title">
           <div className="section-title">
             <h2 className="dark-bg">Nhà Đồng Hành</h2>
           </div>
@@ -37,9 +37,9 @@ class Sponsor extends Component {
             </div>
           </div>
 
-          <div class="column-resp">
+          <div className="column-resp">
             <div className="at-user__avatar sponsor_img"><img
-              src={require('../../../public/assets/img/images/sponsors/stella.jpg')}/>
+              src={require('../../../public/assets/img/images/sponsors/rmit.jpg')}/>
             </div>
           </div>
 
@@ -51,19 +51,13 @@ class Sponsor extends Component {
 
           <div className="column-resp">
             <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/exo.jpg')}/>
+            </div>
+          </div>
+
+          <div className="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
               src={require('../../../public/assets/img/images/sponsors/gap.jpg')}/>
-            </div>
-          </div>
-
-          <div className="column-resp">
-            <div className="at-user__avatar sponsor_img"><img
-              src={require('../../../public/assets/img/images/sponsors/lin.jpg')}/>
-            </div>
-          </div>
-
-          <div className="column-resp">
-            <div className="at-user__avatar sponsor_img"><img
-              src={require('../../../public/assets/img/images/sponsors/rmit.jpg')}/>
             </div>
           </div>
 
@@ -73,9 +67,16 @@ class Sponsor extends Component {
             </div>
           </div>
 
+
           <div className="column-resp">
             <div className="at-user__avatar sponsor_img"><img
-              src={require('../../../public/assets/img/images/sponsors/exo.jpg')}/>
+              src={require('../../../public/assets/img/images/sponsors/stella.jpg')}/>
+            </div>
+          </div>
+
+          <div className="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/lin.jpg')}/>
             </div>
           </div>
         </div>
