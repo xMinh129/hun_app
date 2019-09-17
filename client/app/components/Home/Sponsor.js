@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class Sponsor extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-
-    };
+    this.state = {};
 
 
   }
@@ -16,8 +14,6 @@ class Sponsor extends Component {
   }
 
 
-
-
   render() {
     return (
       <section id="sponsors">
@@ -25,17 +21,66 @@ class Sponsor extends Component {
           <div className="section-title">
             <h2 className="dark-bg">Nhà Đồng Hành</h2>
           </div>
-          <div className="section-body">
-            <div className="bx_slider sponsor_slider_wrap">
-              <ul className="sponsor_slider">
-                <li><img src={require("../../../public/assets/img/images/sponsors/1.jpg")} alt=""/></li>
-                <li><img src={require("../../../public/assets/img/images/sponsors/2.jpg")} alt=""/></li>
-                <li><img src={require("../../../public/assets/img/images/sponsors/3.jpg")} alt=""/></li>
-                <li><img src={require("../../../public/assets/img/images/sponsors/4.jpg")} alt=""/></li>
-              </ul>
+        </div>
+
+        <div class="columns-resp">
+
+          <div class="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/aisec.jpg')}/>
+            </div>
+          </div>
+
+          <div class="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/hb.jpg')}/>
+            </div>
+          </div>
+
+          <div class="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/stella.jpg')}/>
+            </div>
+          </div>
+
+          <div className="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/max.jpg')}/>
+            </div>
+          </div>
+
+          <div className="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/gap.jpg')}/>
+            </div>
+          </div>
+
+          <div className="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/lin.jpg')}/>
+            </div>
+          </div>
+
+          <div className="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/rmit.jpg')}/>
+            </div>
+          </div>
+
+          <div className="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/diari.jpg')}/>
+            </div>
+          </div>
+
+          <div className="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/exo.jpg')}/>
             </div>
           </div>
         </div>
+
+
       </section>
     );
   }

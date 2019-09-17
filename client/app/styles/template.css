@@ -1675,6 +1675,9 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 }
 
 /* Team */
+.advisor {
+  padding-top: 40px;
+}
 .at-section__title {
   margin: 0 0 70px;
   color: #0b0b0b;
@@ -2010,3 +2013,58 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 .modal-content .btn-secondary {
   background: #47ada0 !important;
 }
+
+/* Sponsor images */
+
+.sponsor_img {
+  border-radius: 0px !important
+}
+
+.columns-resp {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.column-resp {
+  flex: 1;
+  margin: 2px;
+  padding: 10px;
+}
+.column:first-child {
+  margin-left: 0;
+}
+.column:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 1200px){
+  .column-resp {
+    padding: 0px 80px 80px 80px;
+  }
+  .columns-resp .column-resp:last-child {
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .columns-resp .column-resp {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+  }
+  .columns-resp .column-resp:nth-last-child(2) {
+    margin-right: 0;
+  }
+  .columns-resp .column-resp:last-child {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 680px) {
+  .columns-resp .column-resp {
+    flex-basis: 100%;
+    margin: 0 0 5px 0;
+  }
+}
+
