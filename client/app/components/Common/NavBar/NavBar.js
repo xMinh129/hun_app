@@ -72,9 +72,9 @@ class NavBar extends Component {
               <NavItem>
                 <NavLink href="/#contacts">Liên Hệ </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink className="highlighted nav-button donation-button" onClick={this.openModal}><span className="volunteer-tab">Đóng Góp</span></NavLink>
-              </NavItem>
+              {/*<NavItem>*/}
+              {/*  <NavLink className="highlighted nav-button donation-button" onClick={this.openModal}><span className="volunteer-tab">Đóng Góp</span></NavLink>*/}
+              {/*</NavItem>*/}
 
               <NavItem>
                 <NavLink className="highlighted nav-button" onClick={this.openModal}><span className="volunteer-tab">Tình Nguyện Viên</span></NavLink>

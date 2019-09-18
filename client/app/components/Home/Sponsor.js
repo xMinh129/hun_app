@@ -80,8 +80,6 @@ class Sponsor extends Component {
             </div>
           </div>
         </div>
-
-
       </section>
     );
   }
