@@ -19,7 +19,7 @@ class Sponsor extends Component {
       <section id="sponsors">
         <div className="container sponsor-title">
           <div className="section-title">
-            <h2 className="dark-bg">Nhà Đồng Hành</h2>
+            <h2 className="dark-bg">Nhà Đồng Hành Cùng Chúng Tôi</h2>
           </div>
         </div>
 
