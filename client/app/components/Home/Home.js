@@ -7,6 +7,7 @@ import Team from "./Team";
 import News from "./News";
 import Sponsor from "./Sponsor";
 import Contact from "./Contact";
+import Donation from "./Donation";
 
 class Home extends Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class Home extends Component {
         <Team/>
         <News/>
         <Sponsor/>
+        <Donation/>
         <Contact/>
       </div>
     );
