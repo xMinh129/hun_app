@@ -1,8 +1,17 @@
 /* Navbar */
 .highlighted:hover {
   margin-right: 20px;
-  background: #47ada0 !important;
+  background: #FFBF00 !important;
   border: none;
+}
+.donation-tab {
+  margin-left: 20px
+}
+
+@media screen and (max-width: 760px){
+  .donation-tab {
+    margin-left: 0px
+  }
 }
 
 .navbar-collapse.collapse {

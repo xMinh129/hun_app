@@ -45,21 +45,21 @@ class Donation extends Component {
             <div className="donation-form">
               <form className="cmxform" id="volunteer-form">
                 <input
-                  id="fname"
+                  id="one-time-donor-name"
                   placeholder="Tên Của Bạn"
                   type="text"
                   name="name"
                   value={this.state.contact.name}
                   required/>
                 <input
-                  id="femail"
+                  id="one-time-donor-email"
                   placeholder="Email"
                   type="email"
                   name="email"
                   value={this.state.contact.email}
                   required/>
                 <input
-                  id="fname"
+                  id="one-time-donor-amount"
                   placeholder="Số tiền (VND)"
                   type="text"
                   name="name"
@@ -82,21 +82,21 @@ class Donation extends Component {
             <div className="donation-form">
               <form className="cmxform" id="volunteer-form">
                 <input
-                  id="fname"
+                  id="recurring-donor-name"
                   placeholder="Tên Của Bạn"
                   type="text"
                   name="name"
                   value={this.state.contact.name}
                   required/>
                 <input
-                  id="femail"
+                  id="recurring-donor-email"
                   placeholder="Email"
                   type="email"
                   name="email"
                   value={this.state.contact.email}
                   required/>
                 <input
-                  id="fname"
+                  id="recurring-donor-amount"
                   placeholder="Số tiền (VND)"
                   type="text"
                   name="name"

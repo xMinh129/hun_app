@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import VolunteerForm from "../../Form/VolunteerForm";
+import LoginForm from "../../Form/LoginForm";
 import {
   Collapse,
   Navbar,
@@ -7,7 +8,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink} from 'reactstrap';
+  NavLink
+} from 'reactstrap';
 
 class NavBar extends Component {
   constructor(props) {
@@ -17,30 +19,55 @@ class NavBar extends Component {
     this.closeModal = this.closeModal.bind(this);
 
     this.state = {
-      modalIsOpen: false,
+      modalVolunteerIsOpen: false,
+      modalDonationIsOpen: false,
+      modalAuthenticationIsOpen: false,
       isOpen: false
     };
   }
-
 
   componentDidMount() {
 
   }
 
-  openModal() {
-    this.setState({
-      modalIsOpen: true,
-
-    });
+  openModal(word) {
+    if (word == 'volunteer') {
+      this.setState({
+        modalVolunteerIsOpen: true
+      });
+    }
+    if (word == 'donation') {
+      this.setState({
+        modalDonationIsOpen: true
+      });
+    }
+    if (word == 'authentication') {
+      this.setState({
+        modalAuthenticationIsOpen: true
+      });
+    }
   }
 
-  closeModal() {
-    this.setState({modalIsOpen: false});
+  closeModal(word) {
+    if (word == 'volunteer') {
+      this.setState({
+        modalVolunteerIsOpen: false
+      });
+    }
+    if (word == 'donation') {
+      this.setState({
+        modalDonationIsOpen: false
+      });
+    }
+    if (word == 'authentication') {
+      this.setState({
+        modalAuthenticationIsOpen: false
+      });
+    }
   }
 
 
   toggle() {
-    console.log(this.state.isOpen);
     this.setState({
       isOpen: !this.state.isOpen
     });
@@ -50,8 +77,9 @@ class NavBar extends Component {
     return (
       <section id="header">
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/"><img src={require('../../../../public/assets/img/images/hun_main_logo.jpg')} alt="Logo"/></NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+          <NavbarBrand href="/"><img src={require('../../../../public/assets/img/images/hun_main_logo.jpg')}
+                                     alt="Logo"/></NavbarBrand>
+          <NavbarToggler onClick={this.toggle}/>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
@@ -67,25 +95,28 @@ class NavBar extends Component {
                 <NavLink href="/#newsandevents">Tin Tức</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#contacts">Truyền Thông</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="/#contacts">Liên Hệ </NavLink>
               </NavItem>
-              {/*<NavItem>*/}
-              {/*  <NavLink className="highlighted nav-button donation-button" onClick={this.openModal}><span className="volunteer-tab">Đóng Góp</span></NavLink>*/}
-              {/*</NavItem>*/}
-
               <NavItem>
-                <NavLink className="highlighted nav-button" onClick={this.openModal}><span className="volunteer-tab">Tình Nguyện Viên</span></NavLink>
+                <NavLink onClick={this.openModal.bind(null, 'authentication')}>Đăng Nhập</NavLink>
+              </NavItem>
+              <NavItem className="donation-tab">
+                <NavLink className="highlighted nav-button donation-button"
+                         onClick={this.openModal.bind(null, 'donation')}><span>Đóng Góp</span></NavLink>
+              </NavItem>
+
+              <NavItem className="volunteer-tab">
+                <NavLink className="highlighted nav-button" onClick={this.openModal.bind(null, 'volunteer')}><span>Tình Nguyện Viên</span></NavLink>
               </NavItem>
 
             </Nav>
           </Collapse>
         </Navbar>
 
-        <VolunteerForm modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal}/>
-
+        <VolunteerForm modalIsOpen={this.state.modalVolunteerIsOpen}
+                       closeModal={this.closeModal.bind(null, 'volunteer')}/>
+        <LoginForm modalIsOpen={this.state.modalAuthenticationIsOpen}
+                   closeModal={this.closeModal.bind(null, 'authentication')}/>
 
       </section>
     );

@@ -5,7 +5,24 @@ jQuery(window).on('load', function () {
     $('#preloadpage').addClass('animated slideOutDown');
 });
 
+$(function() {
+  $(".email-signup").hide();
+  $("#signup-box-link").click(function () {
+    $(".email-login").fadeOut(100);
+    $(".email-signup").delay(100).fadeIn(100);
+    $("#login-box-link").removeClass("active");
+    $("#signup-box-link").addClass("active");
+  });
+  $("#login-box-link").click(function () {
+    $(".email-login").delay(100).fadeIn(100);
+    $(".email-signup").fadeOut(100);
+    $("#login-box-link").addClass("active");
+    $("#signup-box-link").removeClass("active");
+  });
+});
+
 $(document).ready(function(){
+
     //Various Sliders options and configurations
     //More Options -> https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html
     // Slider Section BX Slider Settings
@@ -27,7 +44,7 @@ $(document).ready(function(){
         }
     });
 
-    // Team Section BX Slider Settings
+      // Team Section BX Slider Settings
     $("ul.owl-carousel.team_slider").owlCarousel({
         margin: 30,
         nav: true,
@@ -75,7 +92,7 @@ $(document).ready(function(){
         autoplay:true,
         autoplayTimeout: 9000
     });
-    
+
     // Sponsors Section BX Slider Settings
     $('ul.sponsor_slider').bxSlider({
         minSlides: 2,
@@ -83,7 +100,7 @@ $(document).ready(function(){
         slideWidth: 200
     });
 
-    //Hide mobile menu when you click link 
+    //Hide mobile menu when you click link
     $("ul.mobile-nav li a").on('click', function() {
         $('#mobilemenu').collapse('hide');
     });
@@ -184,6 +201,12 @@ $(document).on('click', '.js-video-control', function(e) {
   playVideo($(this));
   e.preventDefault();
 });
+
+
+
+
+
+
 
 
 

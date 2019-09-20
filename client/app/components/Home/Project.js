@@ -42,7 +42,7 @@ class Project extends Component {
               <p>Hear.Us.Now không ngừng xây dựng các chương trình chất lượng, cùng đội ngũ giảng viên tâm huyết để đem
                 lại những bài học giá trị, những hoạt động bổ ích nhằm rèn dũa kỹ năng cho các em điếc/khiếm thính, giúp
                 các em vững tin bước vào đời.</p>
-              <p><a className="dark" href="#"  onClick={this.openModal}>Đăng Ký Tham Gia</a></p>
+              <button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join" onClick={this.openModal}>Đăng ký tham gia</button>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div className="owl_slider projects_slider_wrap">

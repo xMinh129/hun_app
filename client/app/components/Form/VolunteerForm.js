@@ -100,7 +100,7 @@ class VolunteerForm extends Component {
       ];
     }
     return (
-      <Modal show={this.state.modalIsOpen} onHide={this.props.closeModal} animation={false}>
+      <Modal id='volunteering' show={this.state.modalIsOpen} onHide={this.props.closeModal} animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>TÌNH NGUYỆN VIÊN HEAR.US.NOW</Modal.Title>
         </Modal.Header>

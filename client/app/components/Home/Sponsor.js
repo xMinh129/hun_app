@@ -23,15 +23,15 @@ class Sponsor extends Component {
           </div>
         </div>
 
-        <div class="columns-resp">
+        <div className="columns-resp">
 
-          <div class="column-resp">
+          <div className="column-resp">
             <div className="at-user__avatar sponsor_img"><img
               src={require('../../../public/assets/img/images/sponsors/aisec.jpg')}/>
             </div>
           </div>
 
-          <div class="column-resp">
+          <div className="column-resp">
             <div className="at-user__avatar sponsor_img"><img
               src={require('../../../public/assets/img/images/sponsors/hb.jpg')}/>
             </div>
