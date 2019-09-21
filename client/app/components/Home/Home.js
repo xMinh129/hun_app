@@ -8,6 +8,7 @@ import News from "./News";
 import Sponsor from "./Sponsor";
 import Contact from "./Contact";
 import Donation from "./Donation";
+import Voting from "./Voting";
 
 class Home extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class Home extends Component {
     return (
       <div>
         <Slider/>
+        <Voting/>
         <Story/>
         <Achievement/>
         <Project/>

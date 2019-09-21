@@ -328,6 +328,10 @@ section#slider:before {
   background-position: 0px -350px;
 }
 
+.owl-item li{
+  height: 570px !important;
+}
+
 /*
 ----------------------------
 04. SECTION: ABOUT
@@ -2284,8 +2288,27 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   text-align: center;
   width: 50%;
   display: inline-block;
-  height: 100%;
-  padding-top: 5px;
 }
+
+.login-tab {
+  padding: 10px 0px 10px 0px;
+}
+
+/* Voting */
+#voting {
+  height: 680px;
+  margin-bottom: 20px;
+  padding-top: 0px !important;
+  position:relative;
+}
+
+.btn_voting_1 {
+  top: 500px;
+  left: 570px;
+  text-align:center;
+  position: absolute
+}
+
+
 
 

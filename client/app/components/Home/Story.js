@@ -20,7 +20,7 @@ class Story extends Component {
       <section id="about">
         <div className="container">
           <div className="section-title">
-            <h2 className="dark-bg">Câu Chuyện Hear Us Now</h2>
+            <h2 className="dark-bg">Câu Chuyện Hear.Us.Now</h2>
           </div>
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -32,7 +32,7 @@ class Story extends Component {
                 hành trong hành trình trưởng thành và phát triển nhân cách cùng các em là sứ mệnh mà chúng tôi luôn theo
                 đuổi. Những trải nghiệm, kiến thức các em nhận được từ dự án sẽ là hành trang vô giá, để biết rằng các
                 em không hề đơn độc.</p>
-              <button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join">Các câu chuyện</button>
+              <button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join">Xem thêm các câu chuyện</button>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <h3>Sứ mệnh</h3>

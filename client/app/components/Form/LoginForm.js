@@ -39,10 +39,10 @@ class LoginForm extends Component {
       <Modal show={self.state.modalIsOpen} onHide={self.props.closeModal} animation={false}>
         <div className="login-box">
           <div className="lb-header">
-            <div onClick={self.clickTab.bind(null,"login")} className={self.state.login ? " column-50-inline active":"column-50-inline"}>
+            <div onClick={self.clickTab.bind(null,"login")} className={self.state.login ? " column-50-inline login-tab active":"column-50-inline login-tab"}>
               <a href="#"  ref="Login" id="login-box-link" >Đăng Nhập</a>
             </div>
-            <div onClick={self.clickTab.bind(null,"signup")} className={self.state.signup ? " column-50-inline active":"column-50-inline"}>
+            <div onClick={self.clickTab.bind(null,"signup")} className={self.state.signup ? " column-50-inline login-tab active":"column-50-inline login-tab"}>
              <a href="#" id="signup-box-link" >Đăng Ký</a>
             </div>
           </div>
