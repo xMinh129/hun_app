@@ -39,7 +39,7 @@ class Sponsor extends Component {
 
           <div className="column-resp">
             <div className="at-user__avatar sponsor_img"><img
-              src={require('../../../public/assets/img/images/sponsors/rmit.jpg')}/>
+              src={require('../../../public/assets/img/images/sponsors/stella.jpg')}/>
             </div>
           </div>
 
@@ -67,12 +67,12 @@ class Sponsor extends Component {
             </div>
           </div>
 
-
           <div className="column-resp">
             <div className="at-user__avatar sponsor_img"><img
-              src={require('../../../public/assets/img/images/sponsors/stella.jpg')}/>
+              src={require('../../../public/assets/img/images/sponsors/rmit.jpg')}/>
             </div>
           </div>
+
 
           <div className="column-resp">
             <div className="at-user__avatar sponsor_img"><img

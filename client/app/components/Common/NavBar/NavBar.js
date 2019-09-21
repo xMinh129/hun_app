@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import VolunteerForm from "../../Form/VolunteerForm";
 import LoginForm from "../../Form/LoginForm";
+import DonationForm from "../../Form/DonationForm";
 import {
   Collapse,
   Navbar,
@@ -10,6 +11,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+
 
 class NavBar extends Component {
   constructor(props) {
@@ -117,6 +119,8 @@ class NavBar extends Component {
                        closeModal={this.closeModal.bind(null, 'volunteer')}/>
         <LoginForm modalIsOpen={this.state.modalAuthenticationIsOpen}
                    closeModal={this.closeModal.bind(null, 'authentication')}/>
+        <DonationForm modalIsOpen={this.state.modalDonationIsOpen}
+                      closeModal={this.closeModal.bind(null, 'donation')}/>
 
       </section>
     );
