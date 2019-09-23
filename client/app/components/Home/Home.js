@@ -10,6 +10,7 @@ import Contact from "./Contact";
 import Donation from "./Donation";
 import Voting from "./Voting";
 import Situation from "./Situation";
+import Solution from "./Solution";
 
 class Home extends Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class Home extends Component {
         <Voting/>
         <Story/>
         <Situation/>
+        <Solution/>
         <Achievement/>
         <Project/>
         <Team/>

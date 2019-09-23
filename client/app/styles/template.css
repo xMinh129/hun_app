@@ -1772,6 +1772,7 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   display: block;
   padding-top: 100%;
 }
+
 .at-column:hover {
   z-index: 1;
   box-shadow: 0 8px 50px rgba(0, 0, 0, 0.2);
@@ -2296,7 +2297,6 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 
 /* Voting */
 #voting {
-  height: 700px;
   padding-top: 0px !important;
   position:relative;
 }
@@ -2324,8 +2324,9 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   width: 100%;
 }
 
-.competition_2 {
-  height: 720px;
+/* About */
+#about {
+  padding-top: 0px;
 }
 
 /* Situation */
@@ -2335,7 +2336,58 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0px -100px;
+  padding: 80px 20px 20px 20px
 }
+
+.situation-session {
+  background-color: black;
+  height: 80%
+}
+
+.situation-title {
+  color: white;
+  padding: 20px 20px;
+  font-weight: bold;
+}
+
+.column-inline-33 {
+  display:inline;
+  float: left;
+  width: 33.3%
+}
+
+.situation-description {
+  color: white;
+  padding: 40px 20px 20px 20px;
+}
+
+.situation-source {
+  color: white;
+  text-align: center;
+}
+
+.column-white {
+  background: white;
+}
+
+.solution-title {
+  text-align: center;
+  color: #CA2704;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.padding-10-side {
+  padding-left: 10px;
+  padding-right: 10px
+}
+
+.column-30-width {
+  width: 30% !important;
+  margin-right: 30px;
+  float: left;
+}
+
 
 
 
