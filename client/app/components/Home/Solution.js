@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import "../../styles/home.css";
 
 class Solution extends Component {
   constructor(props) {
