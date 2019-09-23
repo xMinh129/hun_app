@@ -21,7 +21,7 @@ class Voting extends Component {
         <div className="row">
           <div className="column-50-inline competition_1">
             <img
-              src={require('../../../public/assets/img/images/events/tnst_2.jpg')}/>
+              src={require('../../../public/assets/img/images/events/tnst_2.JPG')}/>
             <button className="btn btn-danger btn-lg rds btn_donate btn_join btn_voting_1" type="button" id="btn_join">Bình chọn cho Hear.Us.Now</button>
           </div>
           <div className="column-50-inline competition_2">
