@@ -23,7 +23,7 @@ class Slider extends Component {
       <section id="slider">
         <div className="owl_slider top_slider_wrap">
           <ul className="owl-carousel top_slider">
-            <li className="style-2 video-intro">
+            <li className="style-2 video-intro top-slider-item">
               <div className="contentwrap">
                   <div className="slider_video">
                     <video className="video" id="video1" >
@@ -33,7 +33,7 @@ class Slider extends Component {
                   </div>
                 </div>
             </li>
-            <li className="style-2"  style={{backgroundImage: "url("+bg1+")"}}>
+            <li className="style-2 top-slider-item"  style={{backgroundImage: "url("+bg1+")"}}>
               <div className="contentwrap">
                 <div className="container">
                   <div className="content">
@@ -52,7 +52,7 @@ class Slider extends Component {
                 </div>
               </div>
             </li>
-            <li className="style-3" style={{backgroundImage: "url("+bg2+")"}}>
+            <li className="style-3 top-slider-item" style={{backgroundImage: "url("+bg2+")"}}>
               <div className="contentwrap">
                 <div className="container">
                   <div className="content">
@@ -70,7 +70,7 @@ class Slider extends Component {
               </div>
             </li>
 
-            <li className="style-1 slider-3"
+            <li className="style-1 slider-3 top-slider-item"
                 style={{backgroundImage: "url("+bg3+")"}}>
               <div className="contentwrap">
                 <div className="container">
@@ -87,7 +87,7 @@ class Slider extends Component {
                 </div>
               </div>
             </li>
-            <li className="style-2 slider-4"
+            <li className="style-2 slider-4 top-slider-item"
                 style={{backgroundImage: "url("+bg4+")"}}>
               <div className="contentwrap">
                 <div className="container">

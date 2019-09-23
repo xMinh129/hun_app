@@ -9,6 +9,7 @@ import Sponsor from "./Sponsor";
 import Contact from "./Contact";
 import Donation from "./Donation";
 import Voting from "./Voting";
+import Situation from "./Situation";
 
 class Home extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class Home extends Component {
         <Slider/>
         <Voting/>
         <Story/>
+        <Situation/>
         <Achievement/>
         <Project/>
         <Team/>

@@ -328,7 +328,7 @@ section#slider:before {
   background-position: 0px -350px;
 }
 
-.owl-item li{
+.top-slider-item {
   height: 570px !important;
 }
 
@@ -2296,8 +2296,7 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 
 /* Voting */
 #voting {
-  height: 680px;
-  margin-bottom: 20px;
+  height: 700px;
   padding-top: 0px !important;
   position:relative;
 }
@@ -2307,6 +2306,35 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   left: 570px;
   text-align:center;
   position: absolute
+}
+
+.stack-half {
+  height: 50%;
+  display:block;
+  width: 100%;
+}
+
+.voting_vid {
+  width: 100%;
+  height: 100%
+}
+
+.competition_1 img {
+  height: 100%;
+  width: 100%;
+}
+
+.competition_2 {
+  height: 720px;
+}
+
+/* Situation */
+#situation {
+  background-image: url('../../public/assets/img/images/situation/thuc_trang.jpg');
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -100px;
 }
 
 
