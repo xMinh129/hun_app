@@ -13,6 +13,9 @@ import NotFound from './components/App/NotFound';
 
 import Home from './components/Home/Home.js';
 import TeamDetail from './components/Team/TeamDetail.js';
+import VotingDetail from './components/Voting/VotingDetail.js';
+import NewsDetail from './components/News/NewsDetail.js';
+import DonationSection from './components/DonationSection/DonationSection.js';
 
 import './styles/animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,6 +31,9 @@ render((
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/hun-team" component={TeamDetail}/>
+        <Route exact path="/vote-for-HUN" component={VotingDetail}/>
+        <Route exact path="/contribute" component={DonationSection}/>
+        <Route exact path="/our-news" component={NewsDetail}/>
         <Route component={NotFound}/>
       </Switch>
     </App>

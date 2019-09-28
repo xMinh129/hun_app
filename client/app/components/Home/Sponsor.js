@@ -79,6 +79,12 @@ class Sponsor extends Component {
               src={require('../../../public/assets/img/images/sponsors/lin.jpg')}/>
             </div>
           </div>
+
+          <div className="column-resp">
+            <div className="at-user__avatar sponsor_img"><img
+              src={require('../../../public/assets/img/images/sponsors/vietseeds.jpg')}/>
+            </div>
+          </div>
         </div>
       </section>
     );

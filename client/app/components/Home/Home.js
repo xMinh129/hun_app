@@ -11,6 +11,7 @@ import Donation from "./Donation";
 import Voting from "./Voting";
 import Situation from "./Situation";
 import Solution from "./Solution";
+import Goal from "./Goal";
 
 class Home extends Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class Home extends Component {
         <Situation/>
         <Solution/>
         <Achievement/>
+        <Goal/>
         <Project/>
         <Team/>
         <News/>

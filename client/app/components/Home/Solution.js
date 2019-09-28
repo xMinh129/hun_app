@@ -28,6 +28,7 @@ class Solution extends Component {
                 tiếng Anh ở trình độ A2 theo Khung châu Âu (CEFR), Tin học trình độ Chứng chỉ gia. Bài học được giảng
                 dạy bởi các giáo viên được HUN trang bị Ngôn Ngữ Ký Hiệu và các hình thức học sinh động sử dụng CNTT
                 (e-learning, blended learning). </p>
+
             </div>
             <div className="column-white column-30-width">
               <p className="solution-title">Giải Pháp Kỹ Năng</p>
@@ -38,10 +39,13 @@ class Solution extends Component {
             <div className="column-white column-30-width">
               <p className="solution-title">Giải Pháp Nghề Nghiệp</p>
               <p className="solution-description">HUN đang kết hợp thực hiện chương trình hướng nghiệp trên các lĩnh
-                vực : hội họa (xưởng vẽ Queen Art của Thạc sĩ mỹ thuật Đỗ Quyên_, IT (Adobe Photoshop/Illustrator và
+                vực : hội họa (xưởng vẽ Queen Art của Thạc sĩ mỹ thuật Đỗ Quyên, IT (Adobe Photoshop/Illustrator và
                 làm bánh (Bread and Smiles).</p>
             </div>
           </div>
+        </div>
+        <div className="container center-button">
+          <button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join">Tìm hiểu thêm các giải pháp của HUN</button>
         </div>
       </section>
     );

@@ -25,6 +25,28 @@ class News extends Component {
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="latestnews">
               <h3 className="black-text">Mới Nhất</h3>
+
+              <div className="newsitem">
+                <div className="row">
+                  <div className="col-lg-5 col-md-5 col-sm-5 col-xs-6">
+                    <img src={require("../../../public/assets/img/images/news/trung_thu.jpg")} alt=""/>
+                  </div>
+                  <div className="col-lg-7 col-md-7 col-sm-7 col-xs-6">
+                    <div className="news-text-wrap">
+                      <div className="news-title">Trung Thu Thắp Sáng Ước Mơ
+                      </div>
+                      <div className="news-date">11 Tháng 9 2019
+                      </div>
+                      <div className="news-text">
+                        <p>Chương trình "Đêm hội Trăng Rằm" thành công với: 🌙 300 bánh Trung Thu (bánh dẻo và bánh nướng) 🌙 100 bánh rau câu 🌙 140 lồng đèn bóng kính 🌙 150 quyển tập trắng 🌙 120 bịch bánh snack cùng 50 em học sinh khiếm thính tại HUN.</p>
+                        <p><a href="https://www.facebook.com/hear.us.now.project/photos/a.876399822406431/2495562810490116/?type=3&theater" target="_blank" className="dark light-text">Chi
+                          Tiết</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="newsitem">
                 <div className="row">
                   <div className="col-lg-5 col-md-5 col-sm-5 col-xs-6">
@@ -74,18 +96,6 @@ class News extends Component {
               <div className="events-wrap">
                 <h3 className="black-text">Sự Kiện Sắp Tới</h3>
                 <div className="event-item">
-                  <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2 event-date">10<br/><span
-                    className="month">SEP</span></div>
-                  <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10 event-info">
-                    <div className="event-title">Rước Đèn Trung Thu Cùng Hear.Us.Now</div>
-                    <div className="event-text">
-                      <p>Hãy cùng Hear.Us.Now đón đêm rằm trung thu tại Trường Chuyên Biệt Khiếm Thính Anh Minh.</p>
-                    </div>
-                    <p><a href="#" className="dark light-text" data-toggle="modal" data-target=".event_1">Chi Tiết</a>
-                    </p>
-                  </div>
-                </div>
-                <div className="event-item">
                   <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2 event-date">17<br/><span
                     className="month">SEP</span></div>
                   <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10 event-info">
@@ -95,7 +105,31 @@ class News extends Component {
                         vòng
                         một năm cho các bạn khiếm thính.</p>
                     </div>
-                    <p><a href="#" className="dark light-text" data-toggle="modal" data-target=".event_1">Chi tiết</a>
+                    <p><a href="#" target="_blank" className="dark light-text">Chi tiết</a>
+                    </p>
+                  </div>
+                </div>
+                <div className="event-item">
+                  <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2 event-date">29<br/><span
+                    className="month">SEP</span></div>
+                  <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10 event-info">
+                    <div className="event-title">Top 5 Vòng Chung Kết Giải Thưởng Thanh Niên Sáng Tạo 2019</div>
+                    <div className="event-text">
+                      <p>Hear.Us.Now sẽ tham gia phản biện tại vòng chung kết Giải Thưởng Thanh Niên Sáng Tạo 2019 diễn ra tại Hà Nội, cùng 5 dự án xã hội xuất sắc khác.</p>
+                    </div>
+                    <p><a href="#" target="_blank" className="dark light-text">Chi Tiết</a>
+                    </p>
+                  </div>
+                </div>
+                <div className="event-item">
+                  <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2 event-date">26<br/><span
+                    className="month">OCT</span></div>
+                  <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10 event-info">
+                    <div className="event-title">Chương trình Rút Ngắn Khoảng Vòng tài trợ 2/2019</div>
+                    <div className="event-text">
+                      <p>Hear.Us.Now sẽ tham gia thuyết trình vòng tại trợ 2/2019 chương trình Narrow The Gap của Trung tâm Hỗ trợ Phát triển Cộng đồng LIN.</p>
+                    </div>
+                    <p><a href="https://www.facebook.com/watch/?v=2682334325327570" target="_blank" className="dark light-text">Chi Tiết</a>
                     </p>
                   </div>
                 </div>

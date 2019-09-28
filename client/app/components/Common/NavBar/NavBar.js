@@ -103,8 +103,7 @@ class NavBar extends Component {
                 <NavLink onClick={this.openModal.bind(null, 'authentication')}>Đăng Nhập</NavLink>
               </NavItem>
               <NavItem className="donation-tab">
-                <NavLink className="highlighted nav-button donation-button"
-                         onClick={this.openModal.bind(null, 'donation')}><span>Đóng Góp</span></NavLink>
+                <NavLink href="/contribute"><span>Đóng Góp</span></NavLink>
               </NavItem>
 
               <NavItem className="volunteer-tab">
@@ -119,8 +118,7 @@ class NavBar extends Component {
                        closeModal={this.closeModal.bind(null, 'volunteer')}/>
         <LoginForm modalIsOpen={this.state.modalAuthenticationIsOpen}
                    closeModal={this.closeModal.bind(null, 'authentication')}/>
-        <DonationForm modalIsOpen={this.state.modalDonationIsOpen}
-                      closeModal={this.closeModal.bind(null, 'donation')}/>
+
 
       </section>
     );

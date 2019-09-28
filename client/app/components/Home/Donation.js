@@ -27,7 +27,7 @@ class Donation extends Component {
 
   render() {
     return (
-      <section id="sponsors">
+      <section id="donation">
         <div className="container sponsor-title">
           <div className="section-title">
             <h2 className="dark-bg">Đóng Góp</h2>
