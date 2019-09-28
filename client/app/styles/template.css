@@ -433,14 +433,14 @@ section#slider:before {
   margin-top: 20px !important
 }
 
-@media only screen and (min-width: 375px) and (max-width: 667px) {
+@media only screen and (min-width: 340px) and (max-width: 667px) {
   .btn_join {
     margin-bottom: 40px
   }
   .columns-resp .column-resp {
     flex-basis: 50% !important;
   }
-  .at-user__avatar {
+  .sponsor_img {
     width: 90px !important;
     height: 90px !important;
   }
@@ -1817,10 +1817,10 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 }
 @media (max-width: 600px) {
   .at-column {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 100% !important;
-    flex-basis: 100% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    min-width: 50% !important;
+    flex-basis: 50% !important;
   }
 }
 .at-user {
@@ -1855,7 +1855,7 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   color: #FFBF00;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  line-height: 2.375rem;
+  line-height: 2.340rem;
 }
 .at-social {
   margin: 0 0 -18px;
@@ -1915,6 +1915,13 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   color: #FFBF00 !important;
 }
 
+@media only screen and (min-width: 340px) and (max-width: 667px) {
+  .achievement-icon {
+    font-size: 3em;
+  }
+}
+
+
 .column-right {
   float:right;
   display: inline;
@@ -1970,7 +1977,7 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 667px) {
+@media only screen and (min-width: 340px) and (max-width: 667px) {
   .funding-public-text {
     font-size: 13px;
     letter-spacing: 1px;
@@ -1990,10 +1997,6 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 }
 
 /* Team Detail */
-.at-grid {
-  background-color: white;
-}
-
 .no-border {
   border: none;
 }
@@ -2025,6 +2028,22 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 
 .advisor-section {
   margin-top: 80px
+}
+
+@media only screen and (min-width: 340px) and (max-width: 667px) {
+  .at-user__title {
+    font-size: 14px
+  }
+  .at-user__name {
+    font-size: 14px;
+  }
+  .member_img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  #donation {
+    display: none;
+  }
 }
 
 
@@ -2421,7 +2440,7 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   text-align: center;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 667px){
+@media only screen and (min-width: 340px) and (max-width: 667px){
   .situation-title {
     font-size: 14px;
   }
@@ -2463,7 +2482,7 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   float: left;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 667px) {
+@media only screen and (min-width: 340px) and (max-width: 667px) {
   .column-30-width {
     width: 100%;
     display: block;
@@ -2718,7 +2737,7 @@ news-section {
   color: #47ada0;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 667px) {
+@media only screen and (min-width: 340px) and (max-width: 667px) {
   .donation-form-section {
     width: 90%;
   }

@@ -29,7 +29,7 @@ class Team extends Component {
           <div className="at-grid" data-column="3">
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img src={require('../../../public/assets/img/images/team/thinh.jpg')}/>
+                <div className="at-user__avatar member_img"><img src={require('../../../public/assets/img/images/team/thinh.jpg')}/>
                 </div>
                 <div className="at-user__name">Phạm Hữu Thịnh</div>
                 <div className="at-user__title">Quản Lý Dự Án </div>
@@ -53,7 +53,7 @@ class Team extends Component {
             </div>
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/tran.jpg')}/></div>
                 <div className="at-user__name">Huỳnh Nguyễn Bảo Trân</div>
                 <div className="at-user__title">Quản Lý Truyền Thông</div>
@@ -77,7 +77,7 @@ class Team extends Component {
             </div>
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/hoang_anh.jpg')}/>
                 </div>
                 <div className="at-user__name">Lê Nữ Hoàng Anh</div>
@@ -103,7 +103,7 @@ class Team extends Component {
 
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/minh.jpg')}/></div>
                 <div className="at-user__name">Vũ Xuân Minh</div>
                 <div className="at-user__title">Quản Lý Công Nghệ</div>
@@ -128,7 +128,7 @@ class Team extends Component {
 
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/ngoc.jpg')}/></div>
                 <div className="at-user__name">Đỗ Như Ngọc</div>
                 <div className="at-user__title">Giáo Viên Tiếng Anh</div>
@@ -137,7 +137,7 @@ class Team extends Component {
 
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/huy.jpg')}/></div>
                 <div className="at-user__name">Huỳnh Nguyễn Thanh Huy</div>
                 <div className="at-user__title">Giáo Viên Tiếng Anh</div>
@@ -146,7 +146,7 @@ class Team extends Component {
 
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/quynh.jpg')}/></div>
                 <div className="at-user__name">Nguyễn Thị Quỳnh</div>
                 <div className="at-user__title">Giáo Viên Tiếng Anh</div>
@@ -155,7 +155,7 @@ class Team extends Component {
 
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/dung.jpg')}/></div>
                 <div className="at-user__name">Lại Thuỳ Dung</div>
                 <div className="at-user__title">Giáo Viên Tiếng Anh</div>
@@ -164,7 +164,7 @@ class Team extends Component {
 
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/thi.jpg')}/></div>
                 <div className="at-user__name">Lê Thi Trúc Thi</div>
                 <div className="at-user__title">Giáo Viên Tiếng Anh</div>
@@ -175,7 +175,7 @@ class Team extends Component {
           <div className="at-grid" data-column="2">
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/phuong_thao.jpg')}/></div>
                 <div className="at-user__name">Phạm Phương Thảo</div>
                 <div className="at-user__title">Giáo Viên Tiếng Anh</div>
@@ -183,7 +183,7 @@ class Team extends Component {
             </div>
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/sang.jpg')}/></div>
                 <div className="at-user__name">Cao Nguyễn Sang</div>
                 <div className="at-user__title">Giáo Viên Tiếng Anh</div>
@@ -198,7 +198,7 @@ class Team extends Component {
           <div className="at-grid" data-column="2">
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/hieu.jpg')}/></div>
                 <div className="at-user__name">Lê Đình Hiếu</div>
                 <div className="at-user__title">HUN Founder. CEO Học Viện GAP</div>
@@ -223,7 +223,7 @@ class Team extends Component {
 
             <div className="at-column">
               <div className="at-user">
-                <div className="at-user__avatar"><img
+                <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/oanh.jpg')}/></div>
                 <div className="at-user__name">Đoàn Thị Kiều Oanh</div>
                 <div className="at-user__title">Giảng Viên Đại Học Văn Lang. Cố vấn HUN</div>
