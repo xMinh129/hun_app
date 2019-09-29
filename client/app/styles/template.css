@@ -2482,6 +2482,12 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   float: left;
 }
 
+.situation-source {
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 14px
+}
+
 @media only screen and (min-width: 340px) and (max-width: 667px) {
   .column-30-width {
     width: 100%;
@@ -2490,12 +2496,13 @@ a.btn-secondary:hover, a.btn-secondary:focus {
     text-align: center;
     padding: 0px 20px 0px 20px;
   }
-}
 
-.situation-source {
-  padding-left: 40px;
-  padding-right: 40px;
-  font-size: 14px
+  .situation-source {
+    font-size: 12px;
+  }
+  .btn_join {
+    font-size: 16px !important
+  }
 }
 
 /* Voting */
@@ -2534,7 +2541,7 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   color: #47ada0 !important;
 }
 
-/* News Details */
+/* Story Details */
 .news-details-vid {
   width: 80%
 }
@@ -2743,6 +2750,9 @@ news-section {
   }
   .donation-option {
     font-size: 12px !important;
+  }
+  .amount-buttons-wrapper {
+    font-size: 11px !important;
   }
 
 }

@@ -45,7 +45,7 @@ class Solution extends Component {
           </div>
         </div>
         <div className="container center-button">
-          <button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join">Tìm hiểu thêm các giải pháp của HUN</button>
+          <button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join btn_solution">Tìm hiểu thêm các giải pháp của HUN</button>
         </div>
       </section>
     );
