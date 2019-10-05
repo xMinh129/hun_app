@@ -40,7 +40,6 @@ class VolunteerForm extends Component {
     };
 
     //TODO use axios to make http request in the future
-
     // create an AJAX request
     const xhr = new XMLHttpRequest();
     xhr.open('post', 'http://localhost:8080/api/volunteerRegistrations');
@@ -132,7 +131,7 @@ class VolunteerForm extends Component {
                 onChange={this.onChange}></textarea>
               <p>Bạn thích tham gia dự án nào của HUN?</p>
               <Select placeholder={this.props.volunteerType ? this.props.volunteerType : "Hoạt động"} isMulti options={options} onChange={(values) => this.onSelect(values)} />
-              <button className="btn btn-secondary">Gửi</button>
+              <button className="btn btn-secondary send-modal">Gửi</button>
             </form>
           </div>) : (
           <Modal.Body>Cảm ơn bạn chúng tôi đã nhận được đăng ký của bạn. Hear.Us.Now sẽ sớm liên lạc với bạn.</Modal.Body>

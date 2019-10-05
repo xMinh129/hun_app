@@ -156,6 +156,13 @@ section {
     padding-bottom: 60px;
 }
 
+@media only screen and (min-width: 340px) and (max-width: 667px) {
+  section {
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+}
+
 /* Dark Section CSS*/
 section.dark {
     background-color: #0b0b0b;
@@ -288,6 +295,19 @@ section#header {
   margin-left: 20px;
 }
 
+.donation-tab {
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 340px) and (max-width: 667px) {
+  .highlighted {
+    text-align: center;
+  }
+  .donation-tab {
+    margin-right: 0px;
+    margin-bottom: 10px
+  }
+}
 /* Mobile */
 ul.mobile-nav {
    margin-top: 20px;
@@ -567,7 +587,7 @@ section#slider:before {
 
 .events-wrap .event-item:nth-last-child(1) {
     padding-bottom: 0px;
-    border-bottom: 0px solid transparent; 
+    border-bottom: 0px solid transparent;
 }
 
 /*
@@ -1380,6 +1400,24 @@ a.btn-secondary:hover, a.btn-secondary:focus {
     font-size: 30px;
 }
 
+@media only screen and (min-width: 340px) and (max-width: 667px) {
+  .modal-content {
+    width: 350px !important
+  }
+  .modal-header {
+    font-size: 14px !important;
+  }
+  .modal-body {
+    font-size: 12px !important
+  }
+  .send-modal {
+    font-size: 12px !important
+  }
+  #volunteer-form {
+    font-size: 12px !important
+  }
+}
+
 /*
 ----------------------------
 16. PAGE PRELOADING
@@ -1471,10 +1509,10 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 ----------------------------
 */
 .scrollToTop {
-    width:46px; 
+    width:46px;
     height:43px;
-    padding:5px; 
-    text-align:center; 
+    padding:5px;
+    text-align:center;
     background: #F1EFE9;
     font-weight: bold;
     color: #444;
@@ -2200,6 +2238,24 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   border-radius: 5px;
 }
 
+.donation-form-field {
+  margin-bottom: 0px !important
+}
+
+.donation-authentication-tab {
+  font-size: 11px !important;
+  padding: 0px 0px !important;
+}
+
+.donation-form-body-authentication {
+  height: 400px;
+}
+
+.donation-form-fb {
+  padding: 20px 15px !important;
+  width: 200px !important
+}
+
 .btn_donate:hover {
   color: #fff;
   background-color: #c9302c !important;
@@ -2316,12 +2372,43 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   margin-top: 20px;
   text-align:center;
 }
+
+.account-shown {
+  color: #47ada0
+}
+
+.dropdown {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: .5rem !important;
+  padding-left: .5rem !important;
+}
+
+.dropdown a {
+  text-align: justify;
+  font-weight: 600;
+  color: rgba(0,0,0,.5) !important;
+  text-transform: uppercase;
+}
+
+.signout {
+  text-transform: none !important;
+}
+
+.user-icon {
+  margin-right: 7px;
+}
+
+.exit-icon {
+  float: right;
+  margin-top: 5px;
+}
+
 .u-form-group{
   width:100%;
   margin-bottom: 10px;
 }
-.u-form-group input[type="email"],
-.u-form-group input[type="password"]{
+.u-form-group input{
   width: calc(50% - 22px);
   height:45px;
   outline: none;
@@ -2352,9 +2439,13 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 .forgot-password{
   width:50%;
   text-align: left;
-  text-decoration: underline;
+  text-decoration: underline !important;
   color: #888;
   font-size: 0.75rem;
+}
+
+.forgot-password-link {
+  margin-top: 30px;
 }
 
 .column-50-inline {
@@ -2367,6 +2458,22 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 
 .login-tab {
   padding: 10px 0px 10px 0px;
+}
+
+.skip-login {
+  color: #FB544C !important;
+  font-weight: bold;
+  font-size: 13px !important
+}
+
+.skip-login-section {
+  padding-top: 10px !important;
+}
+
+@media only screen and (min-width: 340px) and (max-width: 667px){
+  .donation-form-fb {
+    margin-bottom: 20px
+  }
 }
 
 /* Voting */
@@ -2400,7 +2507,7 @@ a.btn-secondary:hover, a.btn-secondary:focus {
 
 /* About */
 #about {
-  padding-top: 0px;
+  padding-top: 20px;
 }
 
 /* Situation */
@@ -2500,9 +2607,15 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   .situation-source {
     font-size: 12px;
   }
+
   .btn_join {
     font-size: 16px !important
   }
+
+  .solution-title {
+    font-size: 20px
+  }
+
 }
 
 /* Voting */
@@ -2646,6 +2759,7 @@ news-section {
   margin-top: 0px;
   font-weight: 600;
 }
+
 .big-title {
   letter-spacing: 0px;
   padding-bottom: 13px;
@@ -2656,6 +2770,7 @@ news-section {
   text-transform: capitalize;
   font-weight: 600;
 }
+
 .main-title-box {
   margin-bottom: 60px;
 }
@@ -2724,9 +2839,11 @@ news-section {
   color: #fff;
   width: 100%;
 }
+
 .donation-header {
   margin-bottom: 40px;
 }
+
 .donation-option {
   padding: 15px 0px 15px 0px !important;
   margin: 0px 0px !important
@@ -2735,6 +2852,7 @@ news-section {
 .donation-option.active {
   border: 1px solid #47ada0;
 }
+
 .donation-inactive {
   border: 1px solid #47ada0;
   background: white;
@@ -2742,6 +2860,23 @@ news-section {
 
 .donation-inactive a {
   color: #47ada0;
+}
+
+.donation-choice-active {
+  background: #47ada0 !important;
+  color: white !important;
+  border: 1px solid transparent;
+}
+
+.donation-form-pay {
+  padding: 40px 0px 40px 0px;
+  background: #f4f5f0;
+  border-radius: 3px;
+  border: 1px solid #f4f5f0;
+}
+
+.donation-ul {
+  margin-bottom: 0px !important;
 }
 
 @media only screen and (min-width: 340px) and (max-width: 667px) {
@@ -2757,6 +2892,10 @@ news-section {
 
 }
 
+.error-msg {
+  color: #ff3a46
+}
 
-
-
+.success-msg {
+  color: #FFBF00
+}

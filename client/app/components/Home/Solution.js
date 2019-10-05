@@ -16,7 +16,7 @@ class Solution extends Component {
 
   render() {
     return (
-      <section id="projects">
+      <section id="solutions">
         <div className="container">
           <div className="section-title">
             <h2 className="dark-bg">Giải Pháp Của HUN</h2>

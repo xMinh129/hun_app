@@ -21,7 +21,7 @@ class Achievement extends Component {
   render() {
     let line = require('../../../public/assets/img/images/line_yellow.jpg');
     return (
-      <section id="achievement" className="dark bg">
+      <section id="achievements" className="dark bg">
         <div className="container">
           <div className="section-title" style={{backgroundImage: "url("+line+")"}}>
             <h2 className="color-bg">Chặng đường của HUN</h2>

@@ -137,6 +137,9 @@ class News extends Component {
             </div>
           </div>
         </div>
+        <div className="container center-button">
+          <button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join btn_solution">Xem thêm tin tức</button>
+        </div>
       </section>
     );
   }

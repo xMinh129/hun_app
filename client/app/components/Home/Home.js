@@ -7,7 +7,7 @@ import Team from "./Team";
 import News from "./News";
 import Sponsor from "./Sponsor";
 import Contact from "./Contact";
-import Donation from "./Donation";
+import DonationForm from "../Form/DonationForm";
 import Voting from "./Voting";
 import Situation from "./Situation";
 import Solution from "./Solution";
@@ -42,7 +42,7 @@ class Home extends Component {
         <Team/>
         <News/>
         <Sponsor/>
-        <Donation/>
+        <DonationForm/>
         <Contact/>
       </div>
     );

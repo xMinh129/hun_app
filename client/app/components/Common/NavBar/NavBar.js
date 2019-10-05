@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import VolunteerForm from "../../Form/VolunteerForm";
 import LoginForm from "../../Form/LoginForm";
 import DonationForm from "../../Form/DonationForm";
+import Auth from "../../../modules/Auth";
+
 import {
   Collapse,
   Navbar,
@@ -9,7 +11,11 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  UncontrolledDropdown,
+  DropdownItem,
+  DropdownToggle,
+  DropdownMenu
 } from 'reactstrap';
 
 
@@ -19,12 +25,14 @@ class NavBar extends Component {
     this.openModal = this.openModal.bind(this);
     this.toggle = this.toggle.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.getAuthentication = this.getAuthentication.bind(this);
 
     this.state = {
       modalVolunteerIsOpen: false,
       modalDonationIsOpen: false,
       modalAuthenticationIsOpen: false,
-      isOpen: false
+      isOpen: false,
+      userLogin: Auth.isUserAuthenticated()
     };
   }
 
@@ -75,6 +83,22 @@ class NavBar extends Component {
     });
   }
 
+  componentDidUpdate() {
+  }
+
+  componentWillMount(){
+    var that = this;
+    setTimeout(function() {
+          that.getAuthentication();
+        }, 100);
+  }
+
+  getAuthentication(){
+    this.setState({
+      userLogin: Auth.isUserAuthenticated()
+    });
+  }
+
   render() {
     return (
       <section id="header">
@@ -99,11 +123,23 @@ class NavBar extends Component {
               <NavItem>
                 <NavLink href="/#contacts">Liên Hệ </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink onClick={this.openModal.bind(null, 'authentication')}>Đăng Nhập</NavLink>
-              </NavItem>
+              {this.state.userLogin ? (
+                <UncontrolledDropdown setActiveFromChild>
+                <DropdownToggle tag="a" className="account-setting" caret>
+                  <i className="fa fa-user user-icon" aria-hidden="true"></i>Tài khoản
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem><span className="account-shown">{Auth.getUserData().name}</span></DropdownItem>
+                  <DropdownItem divider />
+                  <a href="/signout"><DropdownItem>Thoát <i className="fa fa-sign-out exit-icon" aria-hidden="true"></i></DropdownItem></a>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+          ): (<NavItem>
+                <NavLink href="/login"> Đăng Nhập</NavLink>
+              </NavItem>)}
+
               <NavItem className="donation-tab">
-                <NavLink href="/contribute"><span>Đóng Góp</span></NavLink>
+                <NavLink className="highlighted nav-button" href="/contribute"><span>Đóng Góp</span></NavLink>
               </NavItem>
 
               <NavItem className="volunteer-tab">
@@ -116,8 +152,6 @@ class NavBar extends Component {
 
         <VolunteerForm modalIsOpen={this.state.modalVolunteerIsOpen}
                        closeModal={this.closeModal.bind(null, 'volunteer')}/>
-        <LoginForm modalIsOpen={this.state.modalAuthenticationIsOpen}
-                   closeModal={this.closeModal.bind(null, 'authentication')}/>
 
 
       </section>
