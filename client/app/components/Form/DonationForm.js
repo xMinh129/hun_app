@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 import Auth from "../../modules/Auth.js";
+import apiRoutes from "../../routes/ApiRoutes";
 
 class DonationForm extends Component {
   constructor(props) {
@@ -12,10 +13,12 @@ class DonationForm extends Component {
     this.setDonationStage = this.setDonationStage.bind(this);
     this.clickAuthenticationTab = this.clickAuthenticationTab.bind(this);
     this.onChange = this.onChange.bind(this);
+    this.onChangeDonationAmount = this.onChangeDonationAmount.bind(this);
     this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
     this.responseGoogle = this.responseGoogle.bind(this);
     this.responseFacebook = this.responseFacebook.bind(this);
+    this.handlePaySubmit = this.handlePaySubmit.bind(this);
 
     this.state = {
       one_time_donation: true,
@@ -25,14 +28,31 @@ class DonationForm extends Component {
       signup: false,
       donation_amount: false,
       user: {
-        email: ''
+        name: '',
+        email: '',
+        account_no: '',
+        expiry_time: '',
+        ccv: ''
       },
-      donation_stage: 'set_amount'
+      donation_stage: 'set_amount',
+      no_amount_err: false
     };
   }
 
   setDonationStage(word){
-    if (word){
+    if (word == 'get_payment'){
+      if (this.state.donation_amount){
+        this.setState({
+          donation_stage: word
+        })
+      }
+      else {
+        this.setState({
+          no_amount_err: true
+        })
+      }
+    }
+    else {
       this.setState({
         donation_stage: word
       })
@@ -92,6 +112,13 @@ class DonationForm extends Component {
     });
   }
 
+  onChangeDonationAmount(){
+    event.preventDefault();
+    this.setState({
+      donation_amount: parseFloat(event.target.value)
+    });
+  }
+
   handleLoginSubmit(event){
     event.preventDefault();
 
@@ -114,7 +141,6 @@ class DonationForm extends Component {
           modalIsOpen: false
         });
         Auth.authenticateUser(xhr.response.data.user, xhr.response.data.token.accessToken);
-        browserHistory.push('/home');
       } else {
         this.setState({
           error: xhr.response.errors[0].messages[0]
@@ -177,7 +203,10 @@ class DonationForm extends Component {
     }
   }
 
-  handlePaySubmit(){}
+  handlePaySubmit(){
+    event.preventDefault();
+    console.log(this.state.user);
+  }
 
   componentDidMount() {}
 
@@ -211,31 +240,63 @@ class DonationForm extends Component {
                             </div>
                             <div onClick={self.clickDonationTab.bind(null, "monthly_donation")}
                                  className={self.state.monthly_donation ? " column-50-inline donation-option active" : "column-50-inline donation-option donation-inactive"}>
-                              <a className="donation-option" id="monthly_donation-box-link">Đóng góp hàng tháng</a>
+                              <a className="donation-option" id="monthly_donation-box-link">Đóng góp định kỳ</a>
                             </div>
                           </div>
                           <div>
                             <span className="adf-form-header text-center"><span>Chọn số tiến bạn muốn ủng hộ </span></span>
                           </div>
-                          <div className="donate-form-body">
-                            <div>
-                              <div className="amount-wrapper">
-                                <div className="amount-buttons-wrapper"><a onClick={self.clickSetAmount.bind(null, "100000")}
-                                 className={self.state.donation_amount === 100000 ? "button button--grey-20 amount-button donation-choice-active" : "button button--grey-20 amount-button"}>VND 100,000<span
-                                  className="amount-button-monthly"></span></a><a onClick={self.clickSetAmount.bind(null, "200000")}
-                                   className={self.state.donation_amount === 200000 ? "button button--grey-20 amount-button donation-choice-active" : "button button--grey-20 amount-button"}>VND
-                                  200,000<span
-                                    className="amount-button-monthly"></span></a><a onClick={self.clickSetAmount.bind(null, "500000")}
-                                     className={self.state.donation_amount === 500000 ? "button button--grey-20 amount-button donation-choice-active" : "button button--grey-20 amount-button"}>
-                                  VND 500,000<span
-                                    className="amount-button-monthly"></span></a><a onClick={self.clickSetAmount.bind(null, "1000000")}
-                                     className={self.state.donation_amount === 1000000 ? "button button--grey-20 amount-button donation-choice-active" : "button button--grey-20 amount-button"}>VND 1,000,000<span
-                                  className="amount-button-monthly"></span></a>
+
+                              <div className="donate-form-body">
+                                <div>
+                                  <div className="amount-wrapper">
+                                    <div className="amount-buttons-wrapper"><a onClick={self.clickSetAmount.bind(null, "100000")}
+                                     className={self.state.donation_amount === 100000 ? "button button--grey-20 amount-button donation-choice-active" : "button button--grey-20 amount-button"}>VND 100,000<span
+                                      className="amount-button-monthly"></span></a><a onClick={self.clickSetAmount.bind(null, "200000")}
+                                       className={self.state.donation_amount === 200000 ? "button button--grey-20 amount-button donation-choice-active" : "button button--grey-20 amount-button"}>VND
+                                      200,000<span
+                                        className="amount-button-monthly"></span></a><a onClick={self.clickSetAmount.bind(null, "500000")}
+                                         className={self.state.donation_amount === 500000 ? "button button--grey-20 amount-button donation-choice-active" : "button button--grey-20 amount-button"}>
+                                      VND 500,000<span
+                                        className="amount-button-monthly"></span></a><a onClick={self.clickSetAmount.bind(null, "1000000")}
+                                         className={self.state.donation_amount === 1000000 ? "button button--grey-20 amount-button donation-choice-active" : "button button--grey-20 amount-button"}>VND 1,000,000<span
+                                      className="amount-button-monthly"></span></a>
+                                      <form className="donation-other-amount">
+                                        <div className="u-form-group donation-other-amount-form-group ">
+                                          <input
+                                            placeholder="Số tiền khác (VND)"
+                                            type="text"
+                                            name="donation_amount"
+                                            value={this.state.user.donation_amount}
+                                            onChange={this.onChangeDonationAmount}
+                                            required
+                                            className="donation-other-amount-input"
+                                          />
+                                      </div>
+                                      </form>
+                                    </div>
+                                  </div>
                                 </div>
+
+                                {
+                                  this.state.one_time_donation ? (
+                                      <button onClick={self.setDonationStage.bind(null, "get_payment")} className="donate-section-button">Đóng góp một lần</button>
+                                  ) : (
+                                      <button onClick={self.setDonationStage.bind(null, "get_payment")} className="donate-section-button">Đóng góp định kỳ</button>
+                                  )
+                                }
+                                {
+                                  this.state.no_amount_err ? (
+                                    <div className="error-msg">
+                                      Xin vui lòng chọn số tiền
+                                    </div>) : (
+                                    <div>
+                                    </div>)
+                                }
                               </div>
-                            </div>
-                            <button onClick={self.setDonationStage.bind(null, "get_payment")} className="donate-section-button">Đóng góp một lần</button>
-                          </div>
+
+                            )
+                          }
                         </div>
                         </div>
                       </div>
@@ -404,6 +465,117 @@ class DonationForm extends Component {
         </section>
     )
     }
+    else if (this.state.donation_stage === 'confirm_payment_info'){
+      return (
+        <section id="slider">
+            <div className="owl_slider top_slider_wrap">
+              <ul className="owl-carousel top_slider">
+                <li className="style-3 top-slider-item" style={{backgroundImage: "url("+bg1+")"}} id="voting-slider">
+                    <div className="contentwrap">
+                      <div className="container">
+                        <div className="content">
+                        <div className="donation-form-section">
+                        <form className="email-login" className="donation-form-pay">
+                          <h3>Xác nhận thông tin</h3>
+
+                            <div className="u-form-group confirm-info-input">
+                              <span>Họ và tên: </span>
+                              <input
+                                placeholder="Họ và tên"
+                                type="text"
+                                name="name"
+                                value={Auth.isUserAuthenticated() ? Auth.getUserData().name : this.state.user.name}
+                                onChange={this.onChange}
+                                required
+                              />
+                            </div>
+                            <div className="u-form-group confirm-info-input">
+                              <span>Email: </span>
+                              <input
+                                placeholder="Email"
+                                type="email"
+                                name="email"
+                                value={Auth.isUserAuthenticated() ? Auth.getUserData().email : this.state.user.email}
+                                onChange={this.onChange}
+                                required
+                              />
+                            </div>
+
+                            <div className="u-form-group confirm-info-input">
+                              <span>Số tiền đóng góp (VND): </span>
+                              <input
+                                placeholder="Số tiền đóng góp (VND)"
+                                type="text"
+                                name="donation_amount"
+                                value={this.state.donation_amount}
+                                onChange={this.onChangeDonationAmount}
+                                required
+                              />
+                            </div>
+
+                          <div className="u-form-group confirm-info-input">
+                            <span>Số thẻ ngân hàng: </span>
+                            <input
+                              placeholder="Số thẻ ngân hàng"
+                              type="text"
+                              name="account_no"
+                              value={this.state.user.account_no}
+                              onChange={this.onChange}
+                              required
+                            />
+                          </div>
+                          <div className="u-form-group confirm-info-input">
+                            <span>Thời gian hết hạn thẻ: </span>
+                            <input
+                              placeholder="Thời gian hết hạn thẻ (e.g. 08/20)"
+                              type="text"
+                              name="expiry_time"
+                              value={this.state.user.expiry_time}
+                              onChange={this.onChange}
+                              required
+                            />
+                          </div>
+
+                          <div className="u-form-group confirm-info-input">
+                            <span>Mã CCV: </span>
+                            <input
+                              placeholder="Mã CCV"
+                              type="password"
+                              name="ccv"
+                              value={this.state.user.ccv}
+                              onChange={this.onChange}
+                              required
+                            />
+                          </div>
+
+                          {
+                            this.state.one_time_donation ? (
+                              <div className="u-form-group">
+                                <button onClick={this.handePaySubmit}>Đóng góp một lẩn</button>
+                              </div>
+                            ) : (  <div className="u-form-group">
+                                <button onClick={this.handePaySubmit}>Đóng góp định kỳ</button>
+                              </div>)
+                          }
+                          {
+                            this.state.error ? (
+                              <div className="error-msg">
+                                this.state.error
+                              </div>) : (
+                              <div>
+                              </div>)
+                          }
+                        </form>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+      )
+    }
     else {
       return (
         <section id="slider">
@@ -417,13 +589,32 @@ class DonationForm extends Component {
                         <form className="email-login" className="donation-form-pay">
                           <h3>Thông tin tài khoản</h3>
                           {
-                            this.state.signupSuccess ? (<div className="success-msg">
-                              Bạn đã tạo tài khoản thành công. Bạn có thể đăng nhập.
-                            </div>) : (<div></div>)
+                            !Auth.isUserAuthenticated() ? (<div>
+                                <div className="u-form-group">
+                                  <input
+                                    placeholder="Họ và tên"
+                                    type="text"
+                                    name="name"
+                                    value={this.state.user.name}
+                                    onChange={this.onChange}
+                                    required
+                                  />
+                                </div>
+                                <div className="u-form-group">
+                                  <input
+                                    placeholder="Email"
+                                    type="email"
+                                    name="email"
+                                    value={this.state.user.email}
+                                    onChange={this.onChange}
+                                    required
+                                  />
+                                </div>
+                              </div>) : (<div></div>)
                           }
                           <div className="u-form-group">
                             <input
-                              placeholder="Số tài khoản"
+                              placeholder="Số thẻ ngân hàng"
                               type="text"
                               name="account_no"
                               value={this.state.user.account_no}
@@ -433,10 +624,10 @@ class DonationForm extends Component {
                           </div>
                           <div className="u-form-group">
                             <input
-                              placeholder="Tháng hết hạn"
+                              placeholder="Thời gian hết hạn thẻ (e.g. 08/20)"
                               type="text"
-                              name="expiry_month"
-                              value={this.state.user.expiry_month}
+                              name="expiry_time"
+                              value={this.state.user.exipry_time}
                               onChange={this.onChange}
                               required
                             />
@@ -444,18 +635,7 @@ class DonationForm extends Component {
 
                           <div className="u-form-group">
                             <input
-                              placeholder="Năm hết hạn"
-                              type="text"
-                              name="expiry_year"
-                              value={this.state.user.expiry_year}
-                              onChange={this.onChange}
-                              required
-                            />
-                          </div>
-
-                          <div className="u-form-group">
-                            <input
-                              placeholder="CCV"
+                              placeholder="Mã CCV"
                               type="password"
                               name="ccv"
                               value={this.state.user.ccv}
@@ -465,7 +645,7 @@ class DonationForm extends Component {
                           </div>
 
                           <div className="u-form-group">
-                            <button onClick={this.handlePaySubmit}>Đóng góp</button>
+                            <button onClick={self.setDonationStage.bind(null, "confirm_payment_info")}>Tiếp theo</button>
                           </div>
                           {
                             this.state.error ? (

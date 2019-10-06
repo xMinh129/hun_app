@@ -464,9 +464,6 @@ section#slider:before {
     width: 90px !important;
     height: 90px !important;
   }
-  #donation {
-    display: none;
-  }
 }
 
 
@@ -2079,11 +2076,7 @@ a.btn-secondary:hover, a.btn-secondary:focus {
     width: 70px !important;
     height: 70px !important;
   }
-  #donation {
-    display: none;
-  }
 }
-
 
 /* Volunteer form */
 #volunteer-form {
@@ -2242,18 +2235,45 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   margin-bottom: 0px !important
 }
 
+.confirm-info-input {
+  text-align: left;
+  padding-left: 80px;
+  font-size: 14px;
+  margin-bottom: 0px !important
+}
+
 .donation-authentication-tab {
   font-size: 11px !important;
   padding: 0px 0px !important;
 }
 
 .donation-form-body-authentication {
-  height: 400px;
+  height: 430px;
 }
 
 .donation-form-fb {
   padding: 20px 15px !important;
   width: 200px !important
+}
+
+.donation-other-amount {
+  display: inline !important;
+  text-align: left;
+  margin-top: 5px;
+  width:65%;
+  height:48px;
+  margin-bottom: 5px;
+}
+
+.donation-other-amount-input {
+  width: 100% !important;
+  font-weight: 400px;
+  color: #9b9b94 !important;
+  font-size: 16px !important;
+}
+
+::placeholder {
+  color: #9b9b94 !important;
 }
 
 .btn_donate:hover {
@@ -2893,9 +2913,12 @@ news-section {
 }
 
 .error-msg {
-  color: #ff3a46
+  color: #ff3a46;
+  padding-top: 40px
 }
 
 .success-msg {
-  color: #FFBF00
+  color: #FFBF00;
+  font-size: 14px;
+  padding-top: 40px
 }

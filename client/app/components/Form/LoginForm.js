@@ -29,6 +29,7 @@ class LoginForm extends Component {
         name: ''
       },
       signupSuccess: false,
+      loginSuccess: false,
       error: false
     };
   }
@@ -61,7 +62,8 @@ class LoginForm extends Component {
     xhr.addEventListener('load', () => {
       if (xhr.status === 200) {
         this.setState({
-          submitSuccess: true
+          submitSuccess: true,
+          loginSuccess: true
         });
         Auth.authenticateUser(xhr.response.data.user, xhr.response.data.token.accessToken);
         browserHistory.push('/home');
@@ -231,6 +233,12 @@ class LoginForm extends Component {
                 </div>) : (
                 <div>
                 </div>)
+            }
+
+            {
+              this.state.loginSuccess ? (<div className="success-msg">
+                Bạn đã đăng nhập thành công :)
+              </div>) : (<div></div>)
             }
           </form>
 
