@@ -5,11 +5,8 @@ import GoogleLogin from 'react-google-login';
 import apiRoutes from "../../routes/ApiRoutes";
 import Auth from "../../modules/Auth.js";
 import {browserHistory} from 'react-router';
-import {
-  createBrowserHistory,
-  createHashHistory,
-  createMemoryHistory
-} from 'history'
+import history from '../../modules/history';
+
 
 class LoginForm extends Component {
   constructor(props, context) {
@@ -66,7 +63,7 @@ class LoginForm extends Component {
           loginSuccess: true
         });
         Auth.authenticateUser(xhr.response.data.user, xhr.response.data.token.accessToken);
-        browserHistory.push('/home');
+        history.goBack();
       } else {
         this.setState({
           error: xhr.response.errors[0].messages[0]
@@ -149,7 +146,9 @@ class LoginForm extends Component {
     console.log(res);
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    console.log(history)
+  }
 
   componentDidUpdate() {
   }
