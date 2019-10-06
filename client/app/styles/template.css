@@ -2393,6 +2393,12 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   text-align:center;
 }
 
+@media only screen and (min-width: 340px) and (max-width: 667px) {
+  .login-section {
+    padding-top: 100px
+  }
+}
+
 .account-shown {
   color: #47ada0
 }
@@ -2922,3 +2928,5 @@ news-section {
   font-size: 14px;
   padding-top: 40px
 }
+
+/* Customized component */

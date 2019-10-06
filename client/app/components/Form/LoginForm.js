@@ -6,6 +6,7 @@ import apiRoutes from "../../routes/ApiRoutes";
 import Auth from "../../modules/Auth.js";
 import {browserHistory} from 'react-router';
 import history from '../../modules/history';
+import { Checkbox } from '@material-ui/core';
 
 
 class LoginForm extends Component {
@@ -15,6 +16,7 @@ class LoginForm extends Component {
     this.onChange = this.onChange.bind(this);
     this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
+    this.handleCheck = this.handleCheck.bind(this);
 
     this.state = {
       signup: false,
@@ -27,7 +29,8 @@ class LoginForm extends Component {
       },
       signupSuccess: false,
       loginSuccess: false,
-      error: false
+      error: false,
+      chkbox: false
     };
   }
 
@@ -39,6 +42,12 @@ class LoginForm extends Component {
     this.setState({
       user: user
     });
+  }
+
+  handleCheck(){
+    this.setState({
+      chkbox: !this.state.chkbox
+    })
   }
 
   handleLoginSubmit(event){
@@ -280,6 +289,7 @@ class LoginForm extends Component {
                      onChange={this.onChange}
                      required/>
             </div>
+
             <div className="u-form-group">
               <button onClick={this.handleSignUpSubmit}>Đăng ký</button>
             </div>

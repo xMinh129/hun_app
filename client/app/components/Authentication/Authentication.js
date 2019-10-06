@@ -24,7 +24,7 @@ class Authentication extends Component {
           <ul className="owl-carousel top_slider">
             <li className="style-3 top-slider-item" style={{backgroundImage: "url("+bg1+")"}} id="voting-slider">
                 <div className="contentwrap">
-                  <div className="container">
+                  <div className="container login-section">
                     <div className="content">
                       <LoginForm/>
                     </div>
