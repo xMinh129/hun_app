@@ -2951,3 +2951,9 @@ news-section {
 }
 
 /* Customized component */
+/* fb widget */
+.fb_dialog {
+    bottom: 15pt !important;
+    right: 70pt !important;   
+
+}
