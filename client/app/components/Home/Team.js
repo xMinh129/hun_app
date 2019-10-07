@@ -23,10 +23,10 @@ class Team extends Component {
     return (
       <section id="meettheteam" className="dark bg">
         <div className="container">
-          <div className="section-title" style={{backgroundImage: "url("+line+")"}}>
-            <h2 className="color-bg">Gia đình HUN</h2>
+          <div className="section-title team-title" style={{backgroundImage: "url("+line+")"}}>
+            <h2 className="color-bg">Đội ngũ Hear.Us.Now</h2>
           </div>
-          <div className="at-grid" data-column="3">
+          <div className="at-grid" data-column="4">
             <div className="at-column">
               <div className="at-user">
                 <div className="at-user__avatar member_img"><img src={require('../../../public/assets/img/images/team/thinh.jpg')}/>
@@ -125,83 +125,20 @@ class Team extends Component {
                 </ul>
               </div>
             </div>
-
-            <div className="at-column">
-              <div className="at-user">
-                <div className="at-user__avatar member_img"><img
-                  src={require('../../../public/assets/img/images/team/ngoc.jpg')}/></div>
-                <div className="at-user__name">Đỗ Như Ngọc</div>
-                <div className="at-user__title">Giáo Viên Tiếng Anh</div>
-              </div>
-            </div>
-
-            <div className="at-column">
-              <div className="at-user">
-                <div className="at-user__avatar member_img"><img
-                  src={require('../../../public/assets/img/images/team/huy.jpg')}/></div>
-                <div className="at-user__name">Huỳnh Nguyễn Thanh Huy</div>
-                <div className="at-user__title">Giáo Viên Tiếng Anh</div>
-              </div>
-            </div>
-
-            <div className="at-column">
-              <div className="at-user">
-                <div className="at-user__avatar member_img"><img
-                  src={require('../../../public/assets/img/images/team/quynh.jpg')}/></div>
-                <div className="at-user__name">Nguyễn Thị Quỳnh</div>
-                <div className="at-user__title">Giáo Viên Tiếng Anh</div>
-              </div>
-            </div>
-
-            <div className="at-column">
-              <div className="at-user">
-                <div className="at-user__avatar member_img"><img
-                  src={require('../../../public/assets/img/images/team/dung.jpg')}/></div>
-                <div className="at-user__name">Lại Thuỳ Dung</div>
-                <div className="at-user__title">Giáo Viên Tiếng Anh</div>
-              </div>
-            </div>
-
-            <div className="at-column">
-              <div className="at-user">
-                <div className="at-user__avatar member_img"><img
-                  src={require('../../../public/assets/img/images/team/thi.jpg')}/></div>
-                <div className="at-user__name">Lê Thi Trúc Thi</div>
-                <div className="at-user__title">Giáo Viên Tiếng Anh</div>
-              </div>
-            </div>
           </div>
 
-          <div className="at-grid" data-column="2">
-            <div className="at-column">
-              <div className="at-user">
-                <div className="at-user__avatar member_img"><img
-                  src={require('../../../public/assets/img/images/team/phuong_thao.jpg')}/></div>
-                <div className="at-user__name">Phạm Phương Thảo</div>
-                <div className="at-user__title">Giáo Viên Tiếng Anh</div>
-              </div>
-            </div>
-            <div className="at-column">
-              <div className="at-user">
-                <div className="at-user__avatar member_img"><img
-                  src={require('../../../public/assets/img/images/team/sang.jpg')}/></div>
-                <div className="at-user__name">Cao Nguyễn Sang</div>
-                <div className="at-user__title">Giáo Viên Tiếng Anh</div>
-              </div>
-            </div>
-          </div>
 
-          <div className="section-title advisor">
+          <div className="section-title advisor-title">
             <h2 className="color-bg">Ban Cố Vấn</h2>
           </div>
 
-          <div className="at-grid" data-column="2">
+          <div className="at-grid" data-column="3">
             <div className="at-column">
               <div className="at-user">
                 <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/hieu.jpg')}/></div>
                 <div className="at-user__name">Lê Đình Hiếu</div>
-                <div className="at-user__title">HUN Founder. CEO Học Viện GAP</div>
+                <div className="at-user__title">Founder. CEO Học Viện GAP</div>
                 <ul className="at-social">
                   <li className="at-social__item"><a href="https://www.facebook.com/pianistLDH" target="_blank">
                     <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
@@ -226,7 +163,7 @@ class Team extends Component {
                 <div className="at-user__avatar member_img"><img
                   src={require('../../../public/assets/img/images/team/oanh.jpg')}/></div>
                 <div className="at-user__name">Đoàn Thị Kiều Oanh</div>
-                <div className="at-user__title">Giảng Viên Đại Học Văn Lang. Cố vấn HUN</div>
+                <div className="at-user__title">Giảng Viên Đại Học Văn Lang</div>
                 {/*<ul className="at-social">*/}
                 {/*  <li className="at-social__item"><a href="https://www.facebook.com/pianistLDH" target="_blank">*/}
                 {/*    <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">*/}
@@ -246,6 +183,75 @@ class Team extends Component {
               </div>
             </div>
           </div>
+
+          <div className="section-title teacher-title">
+            <h2 className="color-bg">Giáo viên</h2>
+          </div>
+
+          <div className="at-grid" data-column="3">
+          <div className="at-column">
+            <div className="at-user">
+              <div className="at-user__avatar member_img"><img
+                src={require('../../../public/assets/img/images/team/ngoc.jpg')}/></div>
+              <div className="at-user__name">Đỗ Như Ngọc</div>
+              <div className="at-user__title">Giáo Viên Tiếng Anh</div>
+            </div>
+          </div>
+
+          <div className="at-column">
+            <div className="at-user">
+              <div className="at-user__avatar member_img"><img
+                src={require('../../../public/assets/img/images/team/huy.jpg')}/></div>
+              <div className="at-user__name">Huỳnh Nguyễn Thanh Huy</div>
+              <div className="at-user__title">Giáo Viên Tiếng Anh</div>
+            </div>
+          </div>
+
+          <div className="at-column">
+            <div className="at-user">
+              <div className="at-user__avatar member_img"><img
+                src={require('../../../public/assets/img/images/team/quynh.jpg')}/></div>
+              <div className="at-user__name">Nguyễn Thị Quỳnh</div>
+              <div className="at-user__title">Giáo Viên Tiếng Anh</div>
+            </div>
+          </div>
+
+          <div className="at-column">
+            <div className="at-user">
+              <div className="at-user__avatar member_img"><img
+                src={require('../../../public/assets/img/images/team/dung.jpg')}/></div>
+              <div className="at-user__name">Lại Thuỳ Dung</div>
+              <div className="at-user__title">Giáo Viên Tiếng Anh</div>
+            </div>
+          </div>
+
+          <div className="at-column">
+            <div className="at-user">
+              <div className="at-user__avatar member_img"><img
+                src={require('../../../public/assets/img/images/team/thi.jpg')}/></div>
+              <div className="at-user__name">Lê Thi Trúc Thi</div>
+              <div className="at-user__title">Giáo Viên Tiếng Anh</div>
+            </div>
+          </div>
+          <div className="at-column">
+            <div className="at-user">
+              <div className="at-user__avatar member_img"><img
+                src={require('../../../public/assets/img/images/team/phuong_thao.jpg')}/></div>
+              <div className="at-user__name">Phạm Phương Thảo</div>
+              <div className="at-user__title">Giáo Viên Tiếng Anh</div>
+            </div>
+          </div>
+          <div className="at-column">
+            <div className="at-user">
+              <div className="at-user__avatar member_img"><img
+                src={require('../../../public/assets/img/images/team/sang.jpg')}/></div>
+              <div className="at-user__name">Cao Nguyễn Sang</div>
+              <div className="at-user__title">Giáo Viên Tiếng Anh</div>
+            </div>
+          </div>
+          </div>
+
+
         </div>
       </section>
     );

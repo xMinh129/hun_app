@@ -34,7 +34,6 @@ class Authentication extends Component {
           </ul>
         </div>
       </section>
-
     );
   }
 }

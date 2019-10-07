@@ -33,19 +33,21 @@ class Contact extends Component {
                                                                      aria-hidden="true"></i></a>
                 <a href="https://www.instagram.com/hearusnowproject" target="_blank"><i className="fa fa-instagram fa-3x"
                                                                      aria-hidden="true"></i></a>
-                <a href="mailto:hear.us.now.project@gmail.com" target="_blank"><i className="fa fa-envelope fa-3x"
+                <a href="mailto:hear.us.now.project@gmail.com" target="_blank"><i className="fa fa-youtube fa-3x"
                                                                         aria-hidden="true"></i></a>
               </div>
               <div className="contacts">
                 <span className="details">Tel: (+84) 0933 857 500</span>
                 <hr/>
-                  <span className="details">Email: hearusnowproject@gmail.com</span>
+                  <span className="details email-by-word">Email: hear.us.now.project@gmail.com</span>
+                  <div className="social-icons email-by-image"><a href="mailto:hear.us.now.project@gmail.com" target="_blank"><i className="fa fa-envelope fa-3x"
+                                                                          aria-hidden="true"></i></a></div>
               </div>
             </div>
             <div className="row">
               <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <h3 className="black-text">Địa Điểm</h3>
-                <p>Hẻm 155 Xô Viết Nghệ Tĩnh, Quận Bình Thạnh, TPHCM, Việt Nam</p>
+                <p>89 Vạn Kiếp, Phường 3, Quận Bình Thạnh, TPHCM, Việt Nam</p>
               </div>
               <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 sendmessage">
                 <h3 className="black-text">Gửi Tin Nhắn Cho HUN</h3>
