@@ -2953,15 +2953,6 @@ news-section {
 /* Customized component */
 /* fb widge */
 .fb_dialog {
-  background: none;
-    border-radius: 50%;
-    bottom: 14pt;
-    display: inline;
-    height: 45pt !important;
-    padding: 0px;
-    position: fixed;
-    right: 70pt !important;
-    top: auto;
-    width: 45pt;
-    z-index: 2147483646;
+  height: 45pt !important;
+  right: 70pt !important;    
 }
