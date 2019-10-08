@@ -604,6 +604,30 @@ section#slider:before {
   padding-top: 80px
 }
 
+.sponsor-title-section {
+  margin-bottom: 0 !important
+}
+
+.sponsor-category {
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #4287f5;
+  margin-bottom: 40px;
+}
+
+.sponsor-category h3 {
+  color: #4287f5 !important;
+}
+
+#sponsors {
+  padding-bottom: 0px !important;
+}
+
+.diari_img {
+  top: 40
+}
+
 /*
 ----------------------------
 10. SECTION: CONTACTS
@@ -2173,6 +2197,10 @@ a.btn-secondary:hover, a.btn-secondary:focus {
     flex-basis: 100%;
     margin: 0 0 5px 0;
   }
+}
+
+#donation {
+  padding-bottom: 0px;
 }
 
 .donation-box {

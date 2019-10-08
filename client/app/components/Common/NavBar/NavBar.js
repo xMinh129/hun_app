@@ -115,7 +115,7 @@ class NavBar extends Component {
                 <NavLink href="/#projects">Các Dự Án</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#meettheteam">Team HUN</NavLink>
+                <NavLink href="/#meettheteam">Đội Ngũ</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/#newsandevents">Tin Tức</NavLink>
@@ -143,7 +143,7 @@ class NavBar extends Component {
               </NavItem>
 
               <NavItem className="volunteer-tab">
-                <NavLink className="highlighted nav-button" onClick={this.openModal.bind(null, 'volunteer')}><span>Tình Nguyện Viên</span></NavLink>
+                <NavLink className="highlighted nav-button" onClick={this.openModal.bind(null, 'volunteer')}><span>Tham Gia</span></NavLink>
               </NavItem>
 
             </Nav>
