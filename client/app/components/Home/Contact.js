@@ -29,12 +29,9 @@ class Contact extends Component {
           <div className="section-body">
             <div className="col-lg-3 col-md-3 col-sm-5 col-xs-10 centered contact-details">
               <div className="social-icons">
-                <a href="https://www.facebook.com/hear.us.now.project" target="_blank"><i className="fa fa-facebook-square fa-3x"
-                                                                     aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/hearusnowproject" target="_blank"><i className="fa fa-instagram fa-3x"
-                                                                     aria-hidden="true"></i></a>
-                <a href="mailto:hear.us.now.project@gmail.com" target="_blank"><i className="fa fa-youtube fa-3x"
-                                                                        aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/hear.us.now.project" target="_blank"><img className="contact-icon" src={require('../../../public/assets/img/images/contacts/facebook.jpg')}/></a>
+                <a href="https://www.instagram.com/hearusnowproject" target="_blank"><img className="contact-icon" src={require('../../../public/assets/img/images/contacts/instagram.jpg')}/></a>
+                <a href="https://www.youtube.com/channel/UCBfXaqhRopUGkOP6neqaorA" target="_blank"><img className="contact-icon" src={require('../../../public/assets/img/images/contacts/youtube.jpg')}/></a>
               </div>
               <div className="contacts">
                 <span className="details">Tel: (+84) 0933 857 500</span>

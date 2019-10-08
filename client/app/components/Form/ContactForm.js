@@ -18,40 +18,6 @@ class ContactForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-
-    let postData = {
-      'name': this.state.contact.name,
-      'email': this.state.contact.email,
-      'message': this.state.contact.msg
-    };
-
-    //TODO use axios to make http request in the future
-
-    // create an AJAX request
-    const xhr = new XMLHttpRequest();
-    xhr.open('post', 'http://localhost:8080/api/contacts');
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
-    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-    xhr.responseType = 'json';
-    xhr.addEventListener('load', () => {
-      if (xhr.status === 200) {
-        this.setState({
-          submitSuccess: true
-        });
-      }
-      else if (xhr.response.error) {
-        this.setState({
-          error: xhr.response.error
-        });
-      }
-      else {
-        this.setState({
-          error: 'Unexpected error. Check server'
-        });
-      }
-    });
-    xhr.send(JSON.stringify(postData));
   }
 
   onChange(event){
