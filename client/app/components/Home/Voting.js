@@ -22,7 +22,7 @@ class Voting extends Component {
           <div className="column-50-inline competition_1">
             <img
               src={require('../../../public/assets/img/images/voting/hun_lin_info.JPG')}/>
-            <button className="btn btn-danger btn-lg rds btn_donate btn_join btn_voting_1" type="button" id="btn_join">Bình chọn cho Hear.Us.Now</button>
+            <a href="http://vote.linnarrowthegap.org/" target="blank"><button className="btn btn-danger btn-lg rds btn_donate btn_join btn_voting_1" type="button" id="btn_join">Bình chọn cho Hear.Us.Now</button></a>
           </div>
           <div className="column-50-inline competition_2">
             <div className="stack-half">

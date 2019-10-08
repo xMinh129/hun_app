@@ -40,7 +40,7 @@ class Goal extends Component {
               <div className="goal-icon">
                 <i className="fa fa-graduation-cap f fa-5x achievement-icon"></i>
               </div>
-              <p className="solution-title">Đào tạo nghề chuyên nghiệp</p>
+              <p className="solution-title">Đào tạo hướng nghiệp</p>
               <p className="solution-description">Phối hợp cùng các doanh nghiệp đào tạo và đảm bảo nghề nghiệp ổn định và phù hợp cho người khiếm thính, cùng các kỹ năng mềm giúp họ nhanh chóng hoà nhập với cộng đồng. </p>
               <p className="solution-description"></p>
             </div>
