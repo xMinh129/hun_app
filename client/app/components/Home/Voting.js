@@ -17,7 +17,7 @@ class Voting extends Component {
 
   render() {
     return (
-      <section id="voting">
+      <section id="voting">      
         <div className="row">
           <div className="column-50-inline competition_1">
             <img

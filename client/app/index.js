@@ -12,6 +12,7 @@ import VotingDetail from './components/Voting/VotingDetail.js';
 import StoryDetail from './components/Story/StoryDetail.js';
 import DonationSection from './components/DonationSection/DonationSection.js';
 import Authentication from './components/Authentication/Authentication.js';
+import Post from './components/Post/Post.js';
 
 import './styles/animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -40,6 +41,7 @@ render((
             }
         }/>
         <Route component={NotFound}/>
+        <Route exact path="/post" component={() => <Post/>}/>
       </Switch>
     </App>
   </Router>
