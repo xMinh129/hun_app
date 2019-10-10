@@ -138,10 +138,6 @@ class NavBar extends Component {
                 <NavLink href="/login"> Đăng Nhập</NavLink>
               </NavItem>)}
 
-              <NavItem className="donation-tab">
-                <NavLink className="highlighted nav-button" href="/contribute"><span>Đóng Góp</span></NavLink>
-              </NavItem>
-
               <NavItem className="volunteer-tab">
                 <NavLink className="highlighted nav-button" onClick={this.openModal.bind(null, 'volunteer')}><span>Tham Gia</span></NavLink>
               </NavItem>

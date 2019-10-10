@@ -42,7 +42,6 @@ class Home extends Component {
         <Team/>
         <News/>
         <Sponsor/>
-        <DonationForm/>
         <Contact/>
       </div>
     );
