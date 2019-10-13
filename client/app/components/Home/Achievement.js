@@ -76,10 +76,10 @@ class Achievement extends Component {
           </div>
           <div className="at-grid award-section" data-column="2">
             <div className="half-column column-left csds-image-section">
-              <img src={require("../../../public/assets/img/images/story/csds_1.jpg")} alt=""/>
+              <img src={require("../../../public/assets/img/images/story/csds_1.JPG")} alt=""/>
             </div>
             <div className="half-column csds-image-section">
-              <img src={require("../../../public/assets/img/images/story/csds_2.jpg")} alt=""/>
+              <img src={require("../../../public/assets/img/images/story/csds_2.JPG")} alt=""/>
             </div>
           </div>
           <div className="container center-button">
