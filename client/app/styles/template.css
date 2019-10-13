@@ -1995,9 +1995,44 @@ a.btn-secondary:hover, a.btn-secondary:focus {
   color: #FFBF00 !important;
 }
 
+.achievement-csds {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: white;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.achievement-csds h3 {
+  color: #FB544C !important;
+  text-decoration: underline;
+  text-decoration-color: #FB544C;
+}
+
+.csds-description {
+  padding: 20px 100px 0px 100px;
+  font-weight: bold;
+  font-size: 18px !important
+
+}
+
 @media only screen and (min-width: 340px) and (max-width: 667px) {
+  .achievement-csds h3 {
+    font-size: 18px !important
+  }
+
   .achievement-icon {
     font-size: 3em;
+  }
+  .csds-image-section{
+    width: 100%;
+    height: 300px
+  }
+
+  .csds-description {
+    padding: 20px 0px 0px 0px;
+    font-weight: bold;
+    font-size: 14px !important
   }
 }
 

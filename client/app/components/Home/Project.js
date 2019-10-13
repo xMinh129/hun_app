@@ -33,13 +33,13 @@ class Project extends Component {
       <section id="projects">
         <div className="container">
           <div className="section-title">
-            <h2 className="dark-bg">Các Dự Án</h2>
+            <h2 className="dark-bg">Các Hoạt Động</h2>
           </div>
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <h3>Hoạt Động Của HUN</h3>
               <br/>
-              <p>Hear.Us.Now không ngừng xây dựng các chương trình chất lượng, cùng đội ngũ giảng viên tâm huyết để đem
+              <p className="brief">Hear.Us.Now không ngừng xây dựng các chương trình chất lượng, cùng đội ngũ giảng viên tâm huyết để đem
                 lại những bài học giá trị, những hoạt động bổ ích nhằm rèn dũa kỹ năng cho các em điếc/khiếm thính, giúp
                 các em vững tin bước vào đời.</p>
               <button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join" onClick={this.openModal}>Đăng ký tham gia</button>

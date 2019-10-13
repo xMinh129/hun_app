@@ -68,6 +68,23 @@ class Achievement extends Component {
               </div>
             </div>
           </div>
+          <div className="container achievement-csds">
+            <h3>Giải nhất cuộc thi Thanh Niên Kiến Tạo 2019</h3>
+            <div className="container">
+              <p className="csds-description">Tham gia cuộc thi Thanh Niên Kiến Tạo 2019 CSDS VN, Hear.Us.Now không chỉ có cơ hội giới thiệu dự án và những hoạt động dành cho người khiếm thính đến gần hơn với cộng đồng, mà còn là nguồn động viên để chúng tôi ngày một cố gắng hơn, tạo ra nhiều giá trị hơn, lắng nghe chân thành hơn những người khiếm thính. </p>
+            </div>
+          </div>
+          <div className="at-grid award-section" data-column="2">
+            <div className="half-column column-left csds-image-section">
+              <img src={require("../../../public/assets/img/images/story/csds_1.jpg")} alt=""/>
+            </div>
+            <div className="half-column csds-image-section">
+              <img src={require("../../../public/assets/img/images/story/csds_2.jpg")} alt=""/>
+            </div>
+          </div>
+          <div className="container center-button">
+            <button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join btn_solution">Tìm hiểu thêm về dự án</button>
+          </div>
         </div>
       </section>
     );

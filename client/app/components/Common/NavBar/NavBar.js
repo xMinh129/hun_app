@@ -112,7 +112,7 @@ class NavBar extends Component {
                 <NavLink href="/#about">Câu Chuyện</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#projects">Các Dự Án</NavLink>
+                <NavLink href="/#projects">Các Hoạt Động</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/#meettheteam">Đội Ngũ</NavLink>
