@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Select from 'react-select';
+import apiRoutes from "../../routes/ApiRoutes";
 
 class VolunteerForm extends Component {
   constructor(props) {
@@ -30,7 +31,44 @@ class VolunteerForm extends Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault();    
+    event.preventDefault();
+
+    let postData = {
+      'name': this.state.contact.name,
+      'email': this.state.contact.email,
+      'note': this.state.contact.msg,
+      'type': 'volunteer',
+      'project': this.state.contact.interest
+    };
+
+    // create an AJAX request
+    const xhr = new XMLHttpRequest();
+    xhr.open('post', apiRoutes.contact);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
+    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xhr.responseType = 'json';
+    xhr.addEventListener('load', () => {
+      if (xhr.status === 200) {
+        this.setState({
+          submitSuccess: true
+        });
+      } else {
+        this.setState({
+          error: xhr.response.errors[0].messages[0]
+        });
+      }
+      this.setState({
+        contact: {
+          name: '',
+          email: '',
+          msg: '',
+          interest: []
+        }
+      })
+    });
+    xhr.send(JSON.stringify(postData));
+
   }
 
   onChange(event){
@@ -91,7 +129,7 @@ class VolunteerForm extends Component {
                 required/>
               <textarea
                 id="fmsg"
-                placeholder="Tại sao bạn muốn tham gia Hear.Us.Now?"
+                placeholder="Bạn có những kỹ năng/sở trường nào hoặc nguyện vọng của bạn là gì khi tham gia Hear.Us.Now?"
                 name="msg"
                 value={this.state.contact.msg}
                 onChange={this.onChange}></textarea>
@@ -100,7 +138,7 @@ class VolunteerForm extends Component {
               <button className="btn btn-secondary send-modal">Gửi</button>
             </form>
           </div>) : (
-          <Modal.Body>Cảm ơn bạn chúng tôi đã nhận được đăng ký của bạn. Hear.Us.Now sẽ sớm liên lạc với bạn.</Modal.Body>
+          <Modal.Body><p className="success-msg-contact">Cảm ơn bạn chúng tôi đã nhận được đăng ký của bạn. Hear.Us.Now sẽ sớm liên lạc với bạn.</p></Modal.Body>
         )}
         </Modal>
     );

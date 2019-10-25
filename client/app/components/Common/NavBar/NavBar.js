@@ -26,6 +26,7 @@ class NavBar extends Component {
     this.toggle = this.toggle.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.getAuthentication = this.getAuthentication.bind(this);
+    this.handleDocumentClick = this.handleDocumentClick.bind(this);
 
     this.state = {
       modalVolunteerIsOpen: false,
@@ -81,7 +82,18 @@ class NavBar extends Component {
     this.setState({
       isOpen: !this.state.isOpen
     });
+
   }
+
+  handleDocumentClick(event) {
+    event.preventDefault;
+    console.log(this.state.isOpen);
+    if(this.state.isOpen){
+      this.setState({
+         isOpen: false
+      });
+    }
+   }
 
   componentDidUpdate() {
   }
@@ -91,6 +103,7 @@ class NavBar extends Component {
     setTimeout(function() {
           that.getAuthentication();
         }, 100);
+    document.addEventListener('click', this.handleDocumentClick, true);
   }
 
   getAuthentication(){
@@ -102,11 +115,11 @@ class NavBar extends Component {
   render() {
     return (
       <section id="header">
-        <Navbar color="light" light expand="md">
+        <Navbar color="light" light expand="md" collapseOnSelect >
           <NavbarBrand href="/"><img src={require('../../../../public/assets/img/images/hun_main_logo.jpg')}
                                      alt="Logo"/></NavbarBrand>
           <NavbarToggler onClick={this.toggle}/>
-          <Collapse isOpen={this.state.isOpen} navbar>
+          <Collapse isOpen={this.state.isOpen} navbar >
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/#about">Câu Chuyện</NavLink>

@@ -655,6 +655,10 @@ section#slider:before {
 	margin: 20px 0px;
 }
 
+.success-msg-contact {
+  color: #47ada0 !important
+}
+
 #contacts .social-icons a {
 	color: #000000;
 }
