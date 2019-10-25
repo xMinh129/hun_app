@@ -34,11 +34,10 @@ class Contact extends Component {
                 <a href="https://www.youtube.com/channel/UCBfXaqhRopUGkOP6neqaorA" target="_blank"><img className="contact-icon" src={require('../../../public/assets/img/images/contacts/youtube.jpg')}/></a>
               </div>
               <div className="contacts">
-                <span className="details">Tel: (+84) 0933 857 500</span>
+                <span className="details"><img className="phone-icon" src="https://img.icons8.com/metro/26/000000/phone.png"/> (+84) 0933 857 500</span>
                 <hr/>
                   <span className="details email-by-word">Email: hear.us.now.project@gmail.com</span>
-                  <div className="social-icons email-by-image"><a href="mailto:hear.us.now.project@gmail.com" target="_blank"><i className="fa fa-envelope fa-3x"
-                                                                          aria-hidden="true"></i></a></div>
+                  <div className="social-icons email-by-image"><a href="mailto:hear.us.now.project@gmail.com" target="_blank"><img className="contact-icon" src={require('../../../public/assets/img/images/contacts/gmail.jpg')}/></a></div>
               </div>
             </div>
             <div className="row">

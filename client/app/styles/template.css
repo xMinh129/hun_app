@@ -671,6 +671,10 @@ section#slider:before {
 	margin-right: 8px;
 }
 
+.phone-icon {
+  margin-right: 10px
+}
+
 @media only screen and (min-width: 667px) {
   .email-by-image{
     display: none;
