@@ -13,7 +13,7 @@ import StoryDetail from './components/Story/StoryDetail.js';
 import DonationSection from './components/DonationSection/DonationSection.js';
 import Authentication from './components/Authentication/Authentication.js';
 import Post from './components/Post/Post.js';
-
+import Timeline from './components/Story/Timeline.js';
 import './styles/animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/jquery.bxslider.css';
@@ -35,13 +35,14 @@ render((
         <Route exact path="/contribute" component={DonationSection}/>
         <Route exact path="/our-story" component={StoryDetail}/>
         <Route exact path="/login" component={() => <Authentication/>}/>
+        <Route exact path="/HUN-road" component={Timeline}/>
+        <Route exact path="/post" component={() => <Post/>}/>
         <Route exact path="/signout" render={() => {
               Auth.deauthenticateUser();
               history.goBack();
             }
         }/>
         <Route component={NotFound}/>
-        <Route exact path="/post" component={() => <Post/>}/>
       </Switch>
     </App>
   </Router>

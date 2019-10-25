@@ -83,7 +83,7 @@ class Achievement extends Component {
             </div>
           </div>
           <div className="container center-button">
-            <button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join btn_solution">Tìm hiểu thêm về dự án</button>
+            <a href="/HUN-road"><button className="btn btn-danger btn-lg rds btn_donate btn_join" type="button" id="btn_join btn_solution">Tìm hiểu thêm về dự án</button></a>
           </div>
         </div>
       </section>
