@@ -43,7 +43,7 @@ class Contact extends Component {
             <div className="row">
               <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <h3 className="black-text">Địa Điểm</h3>
-                <p>89 Vạn Kiếp, Phường 3, Quận Bình Thạnh, TPHCM, Việt Nam</p>
+                <p><img className="address-icon" src="https://img.icons8.com/plasticine/100/000000/address.png"/>89 Vạn Kiếp, Phường 3, Quận Bình Thạnh, TPHCM, Việt Nam</p>
               </div>
               <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 sendmessage">
                 <h3 className="black-text">Gửi Tin Nhắn Cho HUN</h3>
